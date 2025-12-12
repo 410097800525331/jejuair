@@ -20,24 +20,12 @@
 
 
   <!-- ##### slider ##### -->
-  <section class="slider_wrap">
-    <div class="slides">
-      <div class="slide_item">
-        <img src="https://static.jejuair.net/cms/images/banner_image/20250801181553945.jpg">
-        <h1>인기 여행지 상하이<br>11~3월 출발 판매 오픈</h1>
-      </div>
-      <div class="slide_item">
-        <img src="https://static.jejuair.net/cms/images/banner_image/20251021091007781.png">
-        <h1>인기 여행지 상하이<br>11~3월 출발 판매 오픈</h1>
-      </div>
-      <div class="slide_item">
-        <img src="https://static.jejuair.net/cms/images/banner_image/20250922133649145.jpg">
-        <h1>인기 여행지 상하이<br>11~3월 출발 판매 오픈</h1>
-      </div>
-    </div>
+  <section id="slider_wrap">
+    <!-- slider.js -->
+    <div class="slides"></div>
   </section>
 
-  <!-- ##### cards ##### -->
+  <!-- ##### lowest price cards ##### -->
   <section class="lowest_price_wrap">
     <div class="inner">
       <div class="lowest_price_title">
@@ -45,96 +33,67 @@
           <p>Cheapest Flight Ticket</p>
           <h2>최저가 항공권</h2>
         </div>
-        <a href="#">전체보기</a>
+        <a class="allmore_btn" href="#">전체보기</a>
       </div>
-      <!-- lowest_price_wrap.js -->
+      <!-- lowest_price.js -->
       <div id="lowest_price_wrap" class="lowest_price_cards"></div>
+    </div>
+  </section>
+
+  <!-- ##### convenience tab ##### -->
+  <section class="convenience_wrap">
+    <div class="inner">
+      <div class="tab_img">
+        <p>Travel</p>
+        <h2>여행에 편리함을 더해보세요.</h2>
+        <div class="img"></div>
+        <!-- <img src="https://static.jejuair.net/cms/images/banner_image/20250908161003044.jpg" alt=""> -->
+      </div>
+      <div class="tab_container">
+        <div class="tabs">
+          <h3 class="tab active" data-tab="pre-travel">여행 전</h3>
+          <h3 class="tab" data-tab="in-flight">기내에서</h3>
+          <h3 class="tab" data-tab="companion">여행 동반</h3>
+        </div>
+        <!-- convenience.js -->
+        <div class="tab_contents"></div>
+      </div>
     </div>
   </section>
 
   <!-- ##### youtube ##### -->
   <section class="youtube_wrap">
     <div class="inner">
-      <iframe width="600" height="400" src="https://www.youtube.com/embed/Qrg7rNRQ2q8?si=JsgaVTdBP4pYJWqK"
+      <div class="animai">
+        <div class="plane_fly"></div>
+        <!-- <div class="cloud_wrap">
+          <img src="/assets/img/main/cloud.png" class="cloud cloud1" alt="">
+          <img src="/assets/img/main/cloud.png" class="cloud cloud2" alt="">
+          <img src="/assets/img/main/cloud.png" class="cloud cloud3" alt="">
+        </div> -->
+      </div>
+      <iframe width="600" height="500"
+        src="https://www.youtube.com/embed/Qrg7rNRQ2q8?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&loop=1&playlist=Qrg7rNRQ2q8&playsinline=1"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      </iframe>
       <div class="youtube_text">
         <p>#제주항공 #jejuair #ai챗봇</p>
-        <h1 class="title">제주항공 (Jeju Air)</h1>
+        <h1 class="color">제주항공 (Jeju Air)</h1>
         <p>
-        <div>
           | 제주항공 하이제코<br>
-          항공사에서 만든 AI 챗봇은 여행 계획을 짤 수 있을까?🤔
-        </div><br>
+          항공사에서 만든 AI 챗봇은 여행 계획을 짤 수 있을까?🤔<br><br>
           AI 챗봇한테 여행 계획 짜달라고 해본 뀰님 계신가요?<br><br>
           전 세계 198개국 언어 소통은 물론,<br>
           제주항공 홈페이지의 모든 것과<br>
           여행지 추천, 여행 플레이리스트,<br>
           심지어 **여행 계획**까지 짜드립니다!<br><br>
-          이제 하이제코와 함께 편리한 여행 준비하세요!🛫🧡
+          <span class="color">이제 하이제코와 함께 편리한 여행 준비하세요!</span>🛫🧡
         </p>
       </div>
     </div>
   </section>
-
-  <!-- #####   ##### -->
-  <!-- <section class="travel_section">
-    <div class="inner">
-      <p>여행에 편리함을 더해보세요.</p>
-      <h2>여행에 편리함을 더해보세요.</h2>
-      <div class="content_wrap">
-        <div class="travel_img">
-          <img class="active" src="https://static.jejuair.net/hpgg/resources/images/@temp/section_travel_t1_01.png" alt="travel_img1">
-          <img src="https://static.jejuair.net/hpgg/resources/images/@temp/section_travel_t2_01.png" alt="travel_img2">
-          <img src="https://static.jejuair.net/hpgg/resources/images/@temp/section_travel_t3_01.png" alt="travel_img3">
-        </div>
-        <div class="tab_container">
-          <div class="tab_menu">
-            <button class="basic_btn" data-target="tab1">여행 전</button>
-            <button class="btn" data-target="tab2">기내에서</button>
-            <button class="btn" data-target="tab3">여행 동반</button>
-          </div>
-          <div class="tab_contents">
-            <div id="tab1" class="tab_item active">
-              <h3>탭 1 내용</h3>
-              <p>여기는 첫 번째 탭의 임시 내용입니다.</p>
-            </div>
-            <div id="tab2" class="tab_item">
-              <h3>탭 2 내용</h3>
-              <p>이곳은 두 번째 탭의 임시 내용입니다.</p>
-            </div>
-            <div id="tab3" class="tab_item">
-              <h3>탭 3 내용</h3>
-              <p>세 번째 탭의 임시 내용이 여기에 들어갑니다.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <script>
-    const tabButtons = document.querySelectorAll(".tab_btn");
-    const tabItems = document.querySelectorAll(".tab_item");
-
-    tabButtons.forEach(btn => {
-      btn.addEventListener("click", () => {
-
-        // 버튼 활성화 변경
-        tabButtons.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-
-        // 콘텐츠 표시 변경
-        const target = btn.dataset.target;
-        tabItems.forEach(item => {
-          item.classList.remove("active");
-          if (item.id === target) {
-            item.classList.add("active");
-          }
-        });
-      });
-    });
-  </script> -->
 
   <!-- ##### notic ##### -->
   <section class="notice_wrap">
@@ -145,7 +104,7 @@
             <p>Notic</p>
             <h2>공지사항</h2>
           </div>
-          <a href="#">전체보기</a>
+          <a class="allmore_btn" href="#">전체보기</a>
         </div>
         <div class="notice_item">
           <button>
@@ -212,8 +171,12 @@
   <script src="/js/toggle_active.js"></script>
   <script src="/js/header.js"></script>
   <script src="/js/footer.js"></script>
+  <script src="/js/sliderData.js"></script>
+  <script src="/js/slider.js"></script>
   <script src="/js/lowest_priceData.js"></script>
   <script src="/js/lowest_price.js"></script>
+  <script src="/js/convenienceData.js"></script>
+  <script src="/js/convenience.js"></script>
   <script src="/js/main.js"></script>
 </body>
 

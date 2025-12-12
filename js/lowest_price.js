@@ -5,7 +5,7 @@ $(cardDatas).each((idx, data) => {
       <div class="card_info">
         <div class="price_row">
           <p>${data.airplane}</p>
-          <p class="text_color">이코노미</p>
+          <p class="color">이코노미</p>
         </div>
         <h3>${data.destination}</h3>
         <div class="price_row">

@@ -22,6 +22,7 @@
 /* common */
 :root {
   --main-color: #FF5000;
+  --sub-color: #ff51002c;
   --text-mian: #000;
   --text-sub: #555;
   --main-bg: #eee;
@@ -39,18 +40,41 @@ p {
   font-size: 1.4rem;
 }
 section {
-  margin: 120px 0 40px;
+  margin: 120px 0 60px;
 }
 .inner {
   width: 1400px;
   margin: 0 auto;
 }
-.text_color {
+.color {
+  color: var(--main-color);
+}
+.more_btn {
+  width: 140px;
+  height: 42px;
+  border-radius: 22px;
+  margin-top: 20px;
+  color: #fff;
+  border: 1px solid #fff;
+  background: transparent;
+  cursor: pointer;
+}
+.allmore_btn {
+  width: 140px;
+  height: 42px;
+  border-radius: 22px;
+  margin-top: 20px;
+  text-align: center;
+  line-height: 42px;
+  color: var(--text-sub);
+  border: 1px solid var(--text-sub);
+  background: transparent;
+  cursor: pointer;
+  transition: .3s;
+}
+.allmore_btn:hover {
   color: var(--main-color);
   border: 1px solid var(--main-color);
-  padding: 2px 12px;
-  border-radius: 12px;
-  font-weight: 600;
 }
 .basic_btn {
   display: block;
@@ -73,9 +97,14 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, tr, th, td,
 footer, header,
-nav, section,
+nav,
 audio, video {
 	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+section {
 	padding: 0;
 	border: 0;
 	vertical-align: baseline;
