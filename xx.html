@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .tab_wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 30px 20px;
+      font-size: 1.4rem;
+    }
+
+    /* 탭 헤더 */
+    .tab_header {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 25px;
+    }
+
+    .tab_btn {
+      padding-bottom: 12px;
+      font-size: 1.6rem;
+      color: #999;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .tab_btn.active {
+      color: #000;
+      font-weight: 600;
+    }
+
+    .tab_btn.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 100%;
+      height: 3px;
+      background: #ff5a00;
+      border-radius: 3px;
+    }
+
+    /* 탭 내용 */
+    .tab_content {
+      display: none;
+    }
+
+    .tab_content.active {
+      display: block;
+    }
+
+    /* 여기는 기존 항공권 예매 스타일 */
+    .trip_type {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 25px;
+      font-size: 1.4rem;
+      color: #999;
+    }
+
+    .trip_type span.active {
+      color: #ff5a00;
+      font-weight: 600;
+    }
+
+    .booking_form {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      align-items: end;
+      gap: 25px;
+      margin-bottom: 35px;
+    }
+
+    .form_item label {
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+      display: block;
+      color: #666;
+    }
+
+    .input_box {
+      background: #fafafa;
+      border: 1px solid #e0e0e0;
+      padding: 14px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .form_arrow {
+      text-align: center;
+      font-size: 2rem;
+      color: #999;
+      padding-bottom: 18px;
+    }
+
+    .pay_method {
+      margin-bottom: 25px;
+    }
+
+    .pay_method label {
+      font-size: 1.3rem;
+      color: #555;
+      margin-right: 10px;
+    }
+
+    .pay_options {
+      margin-top: 8px;
+      display: flex;
+      gap: 25px;
+      font-size: 1.4rem;
+    }
+
+    .discount_row {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .discount_input {
+      flex: 1;
+      padding: 14px 16px;
+      border-radius: 6px;
+      border: 1px solid #e0e0e0;
+      background: #fafafa;
+      font-size: 1.4rem;
+    }
+
+    .coupon_btn {
+      padding: 14px 20px;
+      border: 1px solid #ff5a00;
+      background: #fff3ec;
+      color: #ff5a00;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1.4rem;
+    }
+
+    .search_btn {
+      width: 180px;
+      padding: 14px;
+      background: #b5b5b5;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    /* 더미 페이지 */
+    .dummy_box {
+      padding: 40px 20px;
+      background: #f8f8f8;
+      border-radius: 10px;
+    }
+
+    .dummy_box h2 {
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+    }
+
+    /* 반응형 */
+    @media (max-width: 1024px) {
+      .booking_form {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .booking_form {
+        grid-template-columns: 1fr;
+      }
+
+      .discount_row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .search_btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tab_wrap">
+
+    <!-- 탭 버튼 -->
+    <div class="tab_header">
+      <div class="tab_btn active" data-tab="tab_booking">항공권 예매</div>
+      <div class="tab_btn" data-tab="tab_reserve">예약 조회</div>
+      <div class="tab_btn" data-tab="tab_flight">운항 조회</div>
+    </div>
+
+    <!-- 탭 내용: 항공권 예매 -->
+    <div class="tab_content active" id="tab_booking">
+
+      <div class="trip_type">
+        <span class="active">왕복</span>
+        <span>편도</span>
+        <span>다구간</span>
+      </div>
+
+      <div class="booking_form">
+        <div class="form_item">
+          <label>출발지</label>
+          <div class="input_box">선택</div>
+        </div>
+
+        <div class="form_arrow">↔</div>
+
+        <div class="form_item">
+          <label>도착지</label>
+          <div class="input_box">선택</div>
+        </div>
+
+        <div class="form_item">
+          <label>날짜</label>
+          <div class="input_box">2025.12.10(수) ~ 2025.12.17(수)</div>
+        </div>
+
+        <div class="form_item">
+          <label>성인</label>
+          <div class="input_box">성인1</div>
+        </div>
+      </div>
+
+      <div class="pay_method">
+        <label>결제 방법</label>
+        <div class="pay_options">
+          <label><input type="radio" name="pay" checked> 일반</label>
+          <label><input type="radio" name="pay"> 포인트</label>
+          <label><input type="radio" name="pay"> 기프티켓</label>
+        </div>
+      </div>
+
+      <div class="discount_row">
+        <label>할인 방법</label>
+        <input class="discount_input" placeholder="프로모션 코드를 입력해주세요!">
+        <button class="coupon_btn">운임 할인 쿠폰 ></button>
+      </div>
+
+      <button class="search_btn">항공권 검색</button>
+    </div>
+
+    <!-- 탭 내용: 예약 조회 -->
+    <div class="tab_content" id="tab_reserve">
+      <div class="dummy_box">
+        <h2>예약 조회</h2>
+        <p>임시 페이지입니다. 예약 번호 또는 이름으로 조회 가능합니다.</p>
+      </div>
+    </div>
+
+    <!-- 탭 내용: 운항 조회 -->
+    <div class="tab_content" id="tab_flight">
+      <div class="dummy_box">
+        <h2>운항 조회</h2>
+        <p>임시 페이지입니다. 날짜와 노선을 입력하면 운항 정보를 확인할 수 있습니다.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const tabBtns = document.querySelectorAll('.tab_btn');
+    const tabContents = document.querySelectorAll('.tab_content');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.dataset.tab;
+
+        tabBtns.forEach(b => b.classList.remove('active'));
+        tabContents.forEach(c => c.classList.remove('active'));
+
+        btn.classList.add('active');
+        document.getElementById(target).classList.add('active');
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>

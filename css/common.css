@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'FlightSans';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/FlightSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FlightSans';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/FlightSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FlightSansTitle';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/FlightSans-Title.woff2') format('woff2');
+  font-weight: normal;
+  font-display: swap;
+}
+
+/* common */
+:root {
+  --main-color: #FF5000;
+  --text-mian: #000;
+  --text-sub: #555;
+  --main-bg: #eee;
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+body {
+  font: 1.6rem/1.7 'FlightSans', sans-serif;
+  color: var(--text-sub);
+}
+a {
+  color: var(--text-sub);
+}
+p {
+  font-size: 1.4rem;
+}
+section {
+  margin: 120px 0 40px;
+}
+.inner {
+  width: 1400px;
+  margin: 0 auto;
+}
+.text_color {
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  padding: 2px 12px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+.basic_btn {
+  display: block;
+  padding: 6px 90px;
+  background: var(--main-color);
+  color: #fff;
+  text-align: center;
+  border-radius: 12px;
+  margin: 24px auto;
+}
+
+/* reset */
+* {
+  box-sizing: border-box;
+}
+html, body, div, span, iframe,
+h1, h2, h3, h4, h5, h6, p, pre, a,
+img, strong, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, tr, th, td,
+footer, header,
+nav, section,
+audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+ol, ul {
+	list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+input {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+address {
+  font-style: normal;
+}
