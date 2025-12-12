@@ -43,7 +43,7 @@
 .ticket {
   z-index: 100;
   position: fixed;
-  right: 8px;
+  right: 0;
   top: 50%;
   transform: translateY(-40%);
   width: 350px;
@@ -369,7 +369,7 @@
   justify-content: space-between;
 }
 
-/* ##### convenience tab ##### */
+/* ##### tab ##### */
 .convenience_wrap {
   display: flex;
   gap: 20px;
@@ -432,6 +432,88 @@
 }
 .tab_content h4:hover {
   color: var(--main-color);
+}
+
+/* ##### otherThis ##### */
+.otherThis_wrap .inner {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  align-items: center;
+  height: 500px;
+}
+.otherThis_wrap h3 {
+  position: relative;
+  top: 0;
+  margin: 0 0 10px 10px;
+  transition: 1s;
+  z-index: 5;
+}
+.otherThis_wrap h3::before {
+  display: inline-block;
+  content: '';
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background-color: var(--text-sub);
+  margin-bottom: 8px;
+  margin-right: 8px;
+  z-index: 5;
+}
+.otherThis_wrap h3.on::before {
+  background-color: var(--main-color);
+}
+.otherThis_wrap .inner > div > div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  margin: 0 10px;
+  border-radius: 12px;
+  transition: 1s;
+  cursor: pointer;
+}
+.otherThis_bg {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  border-radius: 12px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.otherThis_wrap .inner > div:hover div {
+  height: 400px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  margin-top: -50px;
+}
+.otherThis_wrap .inner > div:hover h3 {
+  top: -50px;
+}
+.otherThis_wrap .inner > div:hover .otherThis_bg {
+  opacity: 1;
+}
+.otherThis_item1 {background-image: url(/assets/img/main/section_discount_01.webp);}
+.otherThis_item2 {background-image: url(/assets/img/main/section_discount_02.webp);}
+.otherThis_item3 {background-image: url(/assets/img/main/section_discount_03.jpg);}
+.otherThis_item4 {background-image: url(/assets/img/main/section_discount_04.webp);}
+.allmore_btn {
+  position: absolute;
+  bottom: 30%;
+  opacity: 0;
+  color: #fff;
+  border: 1px solid #fff;
+  transition: 0.5s;
+}
+.otherThis_wrap .inner > div:hover .otherThis_bg,
+.otherThis_wrap .inner > div:hover .allmore_btn {
+  opacity: 1;
 }
 
 /* ##### youtube ##### */

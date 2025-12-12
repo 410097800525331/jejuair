@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .jbenefit_wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.jbenefit_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.jbenefit_title h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.jbenefit_title a {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.jbenefit_cards {
+  display: flex;
+  gap: 20px;
+}
+
+.benefit_item {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: height 0.3s ease;
+}
+
+.benefit_item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.benefit_item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0);
+  transition: background 0.4s ease;
+}
+
+.benefit_label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  z-index: 2;
+}
+
+.benefit_desc {
+  position: absolute;
+  bottom: -40px;
+  left: 15px;
+  right: 15px;
+  color: #fff;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  opacity: 0;
+  transition: bottom 0.4s ease, opacity 0.4s ease;
+  z-index: 2;
+}
+
+/* Hover 효과 */
+.benefit_item:hover {
+  height: 230px;
+}
+
+.benefit_item:hover img {
+  transform: scale(1.1);
+}
+
+.benefit_item:hover::after {
+  background: rgba(0,0,0,0.4);
+}
+
+.benefit_item:hover .benefit_desc {
+  bottom: 15px;
+  opacity: 1;
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .jbenefit_cards {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .jbenefit_cards {
+    flex-wrap: wrap;
+  }
+  .benefit_item {
+    height: 160px;
+  }
+}
+
+@media (max-width: 576px) {
+  .benefit_item {
+    height: 150px;
+  }
+  .benefit_item:hover {
+    height: 200px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <section class="jbenefit_wrap">
+  <div class="jbenefit_title">
+    <h2>J 멤버스 혜택존을 경험해 보세요.</h2>
+    <a href="#">전체보기</a>
+  </div>
+
+  <div class="jbenefit_cards">
+    <div class="benefit_item">
+      <img src="/assets/img/main/section_discount_02.webp" alt="렌터카">
+      <span class="benefit_label">렌터카</span>
+      <p class="benefit_desc">편리한 여행을 위한 렌터카 서비스</p>
+    </div>
+
+    <div class="benefit_item">
+      <img src="/assets/img/main/section_discount_01.webp" alt="호텔">
+      <span class="benefit_label">호텔/숙소</span>
+      <p class="benefit_desc">여행을 돕는 프리미엄 숙소 혜택</p>
+    </div>
+
+    <div class="benefit_item">
+      <img src="/assets/img/main/section_discount_03.jpg" alt="보험">
+      <span class="benefit_label">금융/여행자 보험</span>
+      <p class="benefit_desc">여행 중 든든한 보호와 금융 혜택</p>
+    </div>
+
+    <div class="benefit_item">
+      <img src="/assets/img/main/section_discount_04.webp" alt="골프">
+      <span class="benefit_label">골프/투어</span>
+      <p class="benefit_desc">골프 예약부터 투어까지 한번에</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
