@@ -4,39 +4,41 @@ $(document).ready(function () {
       <!-- footer top -->
       <div class="footer_top">
         <div class="footer_link">
-          <h4>항공권 예약</h4>
+          <h4>제주항공</h4>
           <ul>
-            <li><a href="#">서브메뉴</a></li>
-            <li><a href="#">서브메뉴</a></li>
-            <li><a href="#">서브메뉴</a></li>
-            <li><a href="#">서브메뉴</a></li>
-            <li><a href="#">서브메뉴</a></li>
+            <li><a href="/sub/hero.html">회사소개</a></li>
+            <li><a href="/sub/recruit.html">채용안내</a></li>
+            <li><a href="/sub/ccm_hero.html">소비자중심경영</a></li>
+            <li><a href="/sub/notic.html">공지사항</a></li>
           </ul>
         </div>
         <div class="footer_link">
-          <h4>숙소예약</h4>
+          <h4>약관 및 안내</h4>
           <ul>
-            <li><a href="#">서브메뉴</a></li>
-            <li><a href="#">서브메뉴</a></li>
-            <li><a href="#">서브메뉴</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">운송약관 및 기타</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">국내선 여행사 우대</a></li>
+            <li><a href="#">국제선 여행사 우대</a></li>
           </ul>
         </div>
         <div class="footer_link">
-          <h4>이벤트</h4>
+          <h4>기타안내</h4>
           <ul>
-            <li><a href="#">서브메뉴</a></li>
-            <li><a href="#">서브메뉴</a></li>
-            <li><a href="#">서브메뉴</a></li>
-            <li><a href="#">서브메뉴</a></li>
-            <li><a href="#">서브메뉴</a></li>
+          <li><a href="#">사전서약서</a></li>
+          <li><a href="#">항공위험물안내</a></li>
+          <li><a href="#">항공안전투자공시</a></li>
+          <li><a href="#">항공교통이용자 서비스 계획</a></li>
+          <li><a href="#">항공교통이용자 피해구제 계획</a></li>
           </ul>
         </div>
         <div class="footer_link">
-          <h4>공지사항</h4>
+          <h4>이벤트/제휴</h4>
           <ul>
-            <li><a href="#">서브메뉴</a></li>
-            <li><a href="#">서브메뉴</a></li>
-            <li><a href="#">서브메뉴</a></li>
+            <li><a href="#">진행중인 이벤트</a></li>
+            <li><a href="#">종료된 이벤트</a></li>
+            <li><a href="#">호텔/숙소</a></li>
+            <li><a href="#">렌터카</a></li>
           </ul>
         </div>
       </div>

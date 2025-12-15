@@ -1,4 +1,4 @@
-const silderDatas = [
+const sildeDatas = [
   {
     bannerText: "유럽ㆍ시드니ㆍ벤쿠버<br>얼리버드 프로모션",
     subText: "계획은 지금, 출발은 내년에<br> 멀리 여행 간다면 미리 계획하세요.",

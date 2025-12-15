@@ -1,8 +1,8 @@
-$(silderDatas).each((idx, data) => {
+$(sildeDatas).each((idx, data) => {
   const silde = `
       <div class="slide_item">
         <div class="banner_text">
-          <h1>${data.bannerText}</h1>
+          <h2>${data.bannerText}</h2>
           <p>${data.subText}</p>
           <button class="more_btn">자세히 보기</button>
         </div>

@@ -17,5 +17,5 @@ $(cardDatas).each((idx, data) => {
     </article>
   `;
 
-  $("#lowest_price_wrap").append(card);
+  $(".air_ticket").append(card);
 });

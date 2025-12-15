@@ -2,221 +2,10 @@
 @import url(/css/common.css);
 @import url(/css/header.css);
 @import url(/css/footer.css);
-
-/* ticket */
-.ticket_panel {
-  position: absolute;
-  right: 35%;
-  top: 12%;
-  display: flex;
-  flex-direction: row;
-  gap: 12px;
-  width: 260px;
-  background: #fff;
-  border-radius: 18px 0 0 18px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  padding: 16px;
-  transition: transform 0.3s ease;
-}
-.ticket.hidden {
-  transform: translate(92%, -40%);
-}
-.panel_toggle_btn img {
-  width: 40px;
-  height: 40px;
-}
-.ticket_panel.active {
-  background: var(--main-color);
-}
-.panel_toggle_btn.active {
-  transform: scaleX(-1);
-  -webkit-filter: brightness(0) invert(1);
-  filter: brightness(0) invert(1);
-}
-/* tab */
-.tab_content {
-  display: none;
-}
-.tab_content.active {
-  display: block;
-}
-.ticket {
-  z-index: 100;
-  position: fixed;
-  right: 0;
-  top: 50%;
-  transform: translateY(-40%);
-  width: 350px;
-  padding: 40px;
-  font-size: 1.4rem;
-  transition: transform 0.35s ease;
-}
-/* tab */
-.tab_sub,
-.tab_menu {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  text-align: center;
-}
-.tab_sub div {
-  padding: 4px 0;
-}
-.tab_menu div {
-  padding: 8px 0;
-  background: rgba(0, 0, 0, 0.04);
-  cursor: pointer;
-  transition: 0.2s;
-}
-.tab_menu div:hover {
-  background: rgba(0, 0, 0, 0.07);
-}
-.tab_menu div.active {
-  background: var(--main-color);
-  color: #fff;
-}
-.ticket_wrap {
-  position: relative;
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  /* border: 1px solid #ff510046; */
-  overflow: hidden;
-}
-.ticket_top {
-  padding: 20px;
-}
-/* 커팅 선 */
-.ticket_cutline {
-  border-top: 2px dashed var(--text-sub);
-  margin: 6px 0 6px;
-  position: relative;
-}
-/* 톱니 */
-.ticket_cutline::before,
-.ticket_cutline::after {
-  content: "";
-  position: absolute;
-  top: -12px;
-  width: 24px;
-  height: 24px;
-  background: #ddd;
-  border-radius: 50%;
-}
-.ticket_cutline::before {
-  left: -12px;
-}
-.ticket_cutline::after {
-  right: -12px;
-}
-/* ticket Top */
-.ticket_bottom {
-  padding: 20px;
-}
-.arrow_btn {
-  width: 35px;
-  height: 35px;
-  margin: 10px auto;
-  cursor: pointer;
-}
-.input_box {
-  position: relative;
-  width: 100%;
-  padding-bottom: 6px;
-}
-.input_box input {
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid #dcdcdc;
-  padding: 6px 28px 6px 0;
-  font-size: 1.35rem;
-  transition: 0.2s;
-}
-.input_box input:focus {
-  border-bottom-color: var(--main-color);
-}
-.input_box img {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-40%);
-  width: 18px;
-  height: 18px;
-  opacity: 0.7;
-  object-fit: contain;
-}
-/* ticket bottom */
-.pay_method {
-  margin-top: 12px;
-  margin-bottom: 20px;
-}
-.pay_method>label {
-  display: block;
-  font-size: 1.25rem;
-  margin-bottom: 6px;
-}
-.pay_options {
-  display: flex;
-  gap: 10px;
-  font-size: 1.3rem;
-}
-.discount_row {
-  margin-bottom: 26px;
-}
-.discount_row label {
-  font-size: 1.25rem;
-}
-.discount_input {
-  width: 100%;
-  margin-top: 6px;
-  padding: 10px;
-  border-radius: 6px;
-  font-size: 1.25rem;
-  border: 1px solid #dcdcdc;
-  background: #fafafa;
-}
-.coupon_btn {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid var(--main-color);
-  color: var(--main-color);
-  border-radius: 6px;
-  font-size: 1.35rem;
-  cursor: pointer;
-  margin-top: 12px;
-  transition: 0.2s;
-}
-.coupon_btn:hover {
-  background: #fff5ee;
-}
-/* search */
-.search {
-  text-align: center;
-}
-.search_btn {
-  width: 100%;
-  padding: 10px;
-  border-radius: 8px;
-  color: #fff;
-  font-size: 1.55rem;
-  border: 1px solid var(--main-color);
-  background: var(--main-color);
-  box-shadow: 0 4px 14px rgba(255, 90, 0, 0.3);
-  transition: 0.2s;
-}
-.search_btn:hover {
-  filter: brightness(1.05);
-}
-/* tab2 */
-.reserve_msg {
-  font-size: 1.2rem;
-  padding: 30px 0;
-}
-.reserve_msg li {
-  margin-bottom: 8px;
-}
+@import url(/css/ticket.css);
 
 /* ##### slider ##### */
-#slider_wrap {
+#slide_wrap {
   width: 1400px;
   height: 450px;
   margin: 60px auto;
@@ -248,7 +37,7 @@
   padding: 80px 120px;
   z-index: 2;
 }
-.banner_text h1 {
+.banner_text h2 {
   font-size: 2.4rem;
   line-height: 1.4;
   margin-bottom: 16px;
@@ -277,16 +66,16 @@
 }
 
 /* ##### cards ##### */
-.lowest_price_wrap {
+#air_ticket_wrap {
   padding: 30px 0;
 }
-.lowest_price_title {
+.air_ticket_title {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 18px;
 }
-.lowest_price_cards {
+.air_ticket_cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 45px;
@@ -369,6 +158,69 @@
   justify-content: space-between;
 }
 
+/* ##### other ###### */
+.other_wrap .inner {
+  display: flex;
+  align-items: flex-end;
+  gap: 40px;
+}
+.other_img {
+  position: relative;
+  width: 55%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.other_img img {
+  width: 100%; height: 420px;
+}
+.promo_info {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+.promo_thumb {
+  display: flex;
+  gap: 12px;
+}
+.thumb_item {
+  width: 120px; height: 80px;
+  border-radius: 12px;
+  opacity: 0.5;
+  margin-top: 180px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.thumb_item.active {
+  opacity: 1;
+  outline: 2px solid var(--main-color);
+}
+.other_img {
+  position: relative;
+  width: 60%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.other_img img {
+  width: 100%;height: 420px;
+  transition: filter 0.3s;
+}
+.other_img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+.main_label {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  z-index: 2;
+}
+
 /* ##### tab ##### */
 .convenience_wrap {
   display: flex;
@@ -382,11 +234,11 @@
 .tab_img {
   flex: 0.8;
 }
-/*  */
-.tab_img .img {
-  width: 100%; height: 300px;
+.tab_img img {
+  width: 100%;
+  height: 300px;
   margin-top: 20px;
-  background: #ccc;
+  border-radius: 12px;
 }
 .tab_container {
   flex: 1.2;
@@ -394,20 +246,21 @@
 .tabs {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 20px;;
-  border-bottom: 2px solid var(--main-color);
+  margin-bottom: 20px;
+  ;
+  border-bottom: 2px solid var(--text-sub);
 }
 .tab {
   padding: 8px 20px;
   margin-right: 10px;
   border-radius: 6px 6px 0 0;
   color: #aaa;
-  border: 1px solid var(--sub-color);
+  border: 1px solid #aaaaaa70;
   cursor: pointer;
 }
 .tab.active {
-  color: var(--main-color);
-  border: 1px solid var(--main-color);
+  color: var(--text-sub);
+  border: 1px solid var(--text-sub);
 }
 .tab_contents {
   width: 100%;
@@ -425,106 +278,18 @@
   gap: 20px;
   margin-top: 20px;
   padding: 4px 20px 10px;
-  border-bottom: 1px dashed var(--sub-color);
+  border-bottom: 1px dashed #aaaaaa70;
 }
 .tab_text img {
-  width: 70px; height: 70px;
+  width: 70px;
+  height: 70px;
 }
 .tab_content h4:hover {
   color: var(--main-color);
 }
 
-/* ##### otherThis ##### */
-.otherThis_wrap .inner {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  align-items: center;
-  height: 500px;
-}
-.otherThis_wrap h3 {
-  position: relative;
-  top: 0;
-  margin: 0 0 10px 10px;
-  transition: 1s;
-  z-index: 5;
-}
-.otherThis_wrap h3::before {
-  display: inline-block;
-  content: '';
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  background-color: var(--text-sub);
-  margin-bottom: 8px;
-  margin-right: 8px;
-  z-index: 5;
-}
-.otherThis_wrap h3.on::before {
-  background-color: var(--main-color);
-}
-.otherThis_wrap .inner > div > div {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 300px;
-  background-position: center;
-  background-size: cover;
-  margin: 0 10px;
-  border-radius: 12px;
-  transition: 1s;
-  cursor: pointer;
-}
-.otherThis_bg {
-  position: absolute;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  text-align: center;
-  border-radius: 12px;
-  opacity: 0;
-  transition: 0.5s;
-}
-.otherThis_wrap .inner > div:hover div {
-  height: 400px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-  margin-top: -50px;
-}
-.otherThis_wrap .inner > div:hover h3 {
-  top: -50px;
-}
-.otherThis_wrap .inner > div:hover .otherThis_bg {
-  opacity: 1;
-}
-.otherThis_item1 {background-image: url(/assets/img/main/section_discount_01.webp);}
-.otherThis_item2 {background-image: url(/assets/img/main/section_discount_02.webp);}
-.otherThis_item3 {background-image: url(/assets/img/main/section_discount_03.jpg);}
-.otherThis_item4 {background-image: url(/assets/img/main/section_discount_04.webp);}
-.allmore_btn {
-  position: absolute;
-  bottom: 30%;
-  opacity: 0;
-  color: #fff;
-  border: 1px solid #fff;
-  transition: 0.5s;
-}
-.otherThis_wrap .inner > div:hover .otherThis_bg,
-.otherThis_wrap .inner > div:hover .allmore_btn {
-  opacity: 1;
-}
 
 /* ##### youtube ##### */
-/* .youtube_wrap {
-  background: linear-gradient(to bottom,
-  #b7d8f8 0%,
-  #cde0f7 35%,
-  #ffd1a383 70%,
-  #ff51002d 100%
-);
-} */
 .youtube_wrap .inner {
   position: relative;
   display: flex;
@@ -548,30 +313,6 @@ iframe {
   background: url(/assets/img/main/airplane.png) no-repeat 0 0/cover;
   animation: float_rotate 4s linear infinite;
 }
-/* .cloud {
-  position: absolute;
-  top: 30px;
-  height: 120px;
-}
-.cloud1 {
-  left: 10%;
-  width: 300px;
-  transform: scale(-1, 1);
-  animation: float_rotate 6s linear infinite;
-}
-.cloud2 {
-  right: 20%;
-  top: 20%;
-  width: 220px;
-  animation: float_rotate 8s linear infinite;
-}
-.cloud3 {
-  left: 5%;
-  top: 15%;
-  width: 140px;
-  height: 100px;
-  animation: float_rotate 4s linear infinite;
-} */
 @keyframes float_rotate {
   0% {
     transform: translateY(0) rotate(0deg);
@@ -634,5 +375,8 @@ iframe {
 }
 .notice_img {
   width: 40%;
-  background: #ccc;
+}
+.notice_img img {
+  height: 250px;
+  border-radius: 12px;
 }
