@@ -50,7 +50,7 @@ $(document).ready(function () {
                 <div class="sub_menu">
                   <h4>예매 안내</h4>
                   <ul class="sub_menu">
-                    <li><a href="#">항공권 예매</a></li>
+                    <li><a href="reservation.html">항공권 예매</a></li>
                     <li><a href="#">예약 조회</a></li>
                     <li><a href="#">운항 조회</a></li>
                     <li><a href="#">비회원 예약조회</a></li>
@@ -60,34 +60,33 @@ $(document).ready(function () {
                   <h4>탑승 수속 안내</h4>
                   <ul class="sub_menu">
                     <li><a href="/sub/processing.html">빠른 수속</a></li>
-                    <li><a href="#">모바일 탑승권</a></li>
-                    <li><a href="#">공항 정보</a></li>
-                    <li><a href="#">출입국 신고서</a></li>
+                    <li><a href="/sub/mobile_pass.html">모바일 탑승권</a></li>
+                    <li><a href="/sub/oath.html">사전 서약서</a></li>
+                    <li><a href="/sub/Immigration_report.html">출입국 신고서</a></li>
                   </ul>
                 </div>
                 <div class="sub_menu">
                   <h4>수하물 안내</h4>
                   <ul class="sub_menu">
-                    <li><a href="#">사전 수하물</a></li>
-                    <li><a href="#">기내 수하물</a></li>
-                    <li><a href="#">위탁 수하물</a></li>
-                    <li><a href="#">운송제한 물품</a></li>
+                    <li><a href="/sub/advance_baggage.html">사전 수하물</a></li>
+                    <li><a href="/sub/cabin_baggage.html">기내 수하물</a></li>
+                    <li><a href="/sub/limits.html">운송제한 물품</a></li>
+                    <li><a href="/sub/lost.html">수하물 분실 및 배상</a></li>
                   </ul>
                 </div>
                 <div class="sub_menu">
                   <h4>J 멤버스</h4>
                   <ul class="sub_menu">
-                  <li><a href="#">금융/여행자 보험</a></li>
-                  <li><a href="#">골프 멤버십</a></li>
-                  <li><a href="#">반려동물 운송 서비스</a></li>
-                  <li><a href="#">펫 멤버십 / 펫 패스</a></li>
+                  <li><a href="/sub/finance.html">금융/여행자 보험</a></li>
+                  <li><a href="/sub/golf.html">골프 멤버십</a></li>
+                  <li><a href="/sub/pet.html">반려동물 운송 서비스</a></li>
+                  <li><a href="/sub/pet_pass.html">펫 멤버십 / 펫 패스</a></li>
                   </ul>
                 </div>
                 <div class="sub_menu">
                   <h4>이벤트/제휴</h4>
                   <ul class="sub_menu">
-                    <li><a href="#">진행중인 이벤트</a></li>
-                    <li><a href="#">종료된 이벤트</a></li>
+                    <li><a href="/sub/event.html">이벤트</a></li>
                     <li><a href="#">호텔/숙소</a></li>
                     <li><a href="#">렌터카</a></li>
                   </ul>
@@ -129,9 +128,10 @@ $(document).ready(function () {
       <li>
         <button class="mobile_menu_btn">항공권 예매</button>
         <ul class="mobile_sub_menu">
-          <li><a href="#">항공권 예매</a></li>
+          <li><a href="reservation.html">항공권 예매</a></li>
           <li><a href="#">예약 조회</a></li>
           <li><a href="#">운항 조회</a></li>
+          <li><a href="#">비회원 예약조회</a></li>
         </ul>
       </li>
       <li>
@@ -140,6 +140,33 @@ $(document).ready(function () {
           <li><a href="/sub/processing.html">빠른 수속</a></li>
           <li><a href="/sub/mobile_pass.html">모바일 탑승권</a></li>
           <li><a href="/sub/oath.html">사전 서약서</a></li>
+          <li><a href="/sub/Immigration_report.html">출입국 신고서</a></li>
+        </ul>
+      </li>
+      <li>
+        <button class="mobile_menu_btn">여행 준비</button>
+        <ul class="mobile_sub_menu">
+          <li><a href="/sub/advance_baggage.html">사전 수하물</a></li>
+          <li><a href="/sub/cabin_baggage.html">기내 수하물</a></li>
+          <li><a href="/sub/limits.html">운송제한 물품</a></li>
+          <li><a href="/sub/lost.html">수하물 분실 및 배상</a></li>
+        </ul>
+      </li>
+      <li>
+        <button class="mobile_menu_btn">J 멤버스</button>
+        <ul class="mobile_sub_menu">
+          <li><a href="/sub/finance.html">금융/여행자 보험</a></li>
+          <li><a href="/sub/golf.html">골프 멤버십</a></li>
+          <li><a href="/sub/pet.html">반려동물 운송 서비스</a></li>
+          <li><a href="/sub/pet_pass.html">펫 멤버십 / 펫 패스</a></li>
+        </ul>
+      </li>
+      <li>
+        <button class="mobile_menu_btn">이벤트/제휴</button>
+        <ul class="mobile_sub_menu">
+          <li><a href="/sub/event.html">이벤트</a></li>
+          <li><a href="#">호텔/숙소</a></li>
+          <li><a href="#">렌터카</a></li>
         </ul>
       </li>
     </ul>
