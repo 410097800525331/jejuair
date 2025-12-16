@@ -1,14 +1,5 @@
 @charset "utf-8";
 
-.carry_on_wrap {
-  padding: 80px 0;
-}
-
-.inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
 
 .page_intro {
   margin-bottom: 50px;

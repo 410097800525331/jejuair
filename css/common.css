@@ -49,6 +49,10 @@ section {
   max-width: 1400px;
   margin: 0 auto;
 }
+.inner2 {
+  max-width: 1000px;
+  margin: 0 auto;
+}
 .container {
   display: flex;
   justify-content: space-between;
@@ -70,6 +74,21 @@ input[type="radio"] {
 }
 .input_box input:focus {
   border-bottom: 2px solid var(--main-color);
+}
+
+.inner2 .btn {
+  width: 100%;
+  padding: 8px 0;
+  background: var(--main-color);
+  color: #fff;
+  border-radius: 12px;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.inner2 .btn:hover {
+  background: var(--sub-color);
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
 }
 .more_btn {
   width: 140px;
