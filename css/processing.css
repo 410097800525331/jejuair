@@ -1,10 +1,13 @@
 @charset "utf-8";
 
-/* .box {
-  background: #fff;
+.span {
+  color: var(--main-color);
+  text-decoration: underline;
+}
+.processing_container {
   border-radius: 12px;
   padding: 30px;
-  margin-bottom: 30px;
+  margin-top: 30px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
 }
 .tab_btns {
@@ -17,12 +20,11 @@
   text-align: center;
   padding: 14px 0;
   border-radius: 12px;
-  background: #e9edf3;
+  background: var(--main-bg);
   cursor: pointer;
-  font-weight: 600;
 }
 .tab_btn.active {
-  background: #ff6a00;
+  background: var(--main-color);
   color: #fff;
 }
 .search_form {
@@ -44,18 +46,22 @@
   background: #222;
   color: #fff;
   cursor: pointer;
-} */
-/* procedure guide */
+}
+/* video */
+.container iframe {
+  margin-top: 20px;
+}
+/*  */
 .top_tabs {
   display: flex;
-  gap: 50px;
+  gap: 40px;
   margin: 40px 0;
+  cursor: pointer;
 }
 .top_tab.active {
   font-weight: 700;
   border-bottom: 3px solid var(--main-color);
 }
-/* timeline */
 .timeline {
   position: relative;
   padding-left: 40px;
@@ -76,7 +82,7 @@
   gap: 30px;
   padding: 30px 0;
 }
-.timeline_item > div {
+.timeline_item>div {
   display: flex;
   gap: 30px;
 }
@@ -92,10 +98,10 @@
   color: #fff;
 }
 .timeline_item img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 400px; height: 200px;
+  width: 400px;
+  height: 220px;
   border-radius: 12px;
-  margin-bottom: 12px;
+}
+.timeline_item ul {
+  margin-bottom: 20px;
 }

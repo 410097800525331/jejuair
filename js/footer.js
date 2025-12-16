@@ -35,8 +35,7 @@ $(document).ready(function () {
         <div class="footer_link">
           <h4>이벤트/제휴</h4>
           <ul>
-            <li><a href="#">진행중인 이벤트</a></li>
-            <li><a href="#">종료된 이벤트</a></li>
+            <li><a href="/sub/event.html">이벤트</a></li>
             <li><a href="#">호텔/숙소</a></li>
             <li><a href="#">렌터카</a></li>
           </ul>
@@ -75,3 +74,8 @@ $(document).ready(function () {
 
   $("#footer_wrap").append(footer);
 });
+$(document).on('click', '.footer_link h4', function () {
+  if (window.innerWidth <= 1024) {
+    $(this).parent().toggleClass('open')
+  }
+})

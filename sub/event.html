@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제주항공</title>
+  <link rel="ico" href="favicon.ico">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/event.css">
+</head>
+
+<body>
+  <!-- ##### header ##### -->
+  <header id="header_wrap"></header>
+  <div class="ticket"></div>
+
+  <section class="event_page">
+    <div class="inner">
+      <!-- title -->
+      <div class="event_header">
+        <h2>이벤트</h2>
+      </div>
+
+      <!-- tab -->
+      <div class="event_tab">
+        <button class="tab_btn active" data-tab="ongoing">
+          진행중인 이벤트 <span>(38)</span>
+        </button>
+        <button class="tab_btn" data-tab="ended">
+          지난 이벤트 <span>(565)</span>
+        </button>
+      </div>
+
+      <!-- ongoing -->
+      <div class="event_list active" id="ongoing">
+        <div class="event_card">
+          <span class="badge">D-33</span>
+          <h3>함께 여행하면 혜택이 N배</h3>
+          <p>동승객 회원 번호 입력 이벤트</p>
+          <div class="event_info">
+            <span>2025.12.11 ~ 2026.01.18</span>
+            <span class="target">제주항공 탑승객 대상 ⭐</span>
+          </div>
+        </div>
+
+        <div class="event_card">
+          <span class="badge">D-105</span>
+          <h3>일본 쇼핑 할인</h3>
+          <p>미쓰이 아울렛 혜택</p>
+          <div class="event_info">
+            <span>2025.12.08 ~ 2026.03.31</span>
+          </div>
+        </div>
+
+        <div class="event_card">
+          <span class="badge">D-15</span>
+          <h3>카카오페이 즉시 할인</h3>
+          <p>최대 25,000원 할인</p>
+          <div class="event_info">
+            <span>2025.12.01 ~ 2025.12.31</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ended -->
+      <div class="event_list" id="ended">
+        <div class="event_card ended">
+          <h3>함께 웃는 순간, 올 겨울 싱가포르 ✨</h3>
+          <div class="event_info">
+            <span>2025.11.26 ~ 2025.12.15</span>
+          </div>
+        </div>
+
+        <div class="event_card ended">
+          <h3>Fly Fly 리틀트래블러 ✈️</h3>
+          <div class="event_info">
+            <span>2025.11.20 ~ 2025.12.10</span>
+          </div>
+        </div>
+
+        <div class="event_card ended">
+          <h3>11월 크루쇼퍼 쇼핑플라이트</h3>
+          <div class="event_info">
+            <span>2025.11.01 ~ 2025.11.30</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    const tabBtns = document.querySelectorAll(".tab_btn");
+    const eventLists = document.querySelectorAll(".event_list");
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        tabBtns.forEach(b => b.classList.remove("active"));
+        eventLists.forEach(list => list.classList.remove("active"));
+
+        btn.classList.add("active");
+        document.getElementById(btn.dataset.tab).classList.add("active");
+      });
+    });
+  </script>
+
+  <!-- ##### footer ##### -->
+  <footer id="footer_wrap"></footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="/js/header.js"></script>
+  <script src="/js/footer.js"></script>
+  <script src="/js/ticket.js"></script>
+</body>
+
+</html>

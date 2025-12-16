@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+.carry_on_wrap {
+  padding: 80px 0;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.page_intro {
+  margin-bottom: 50px;
+}
+
+.page_intro h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.page_intro p {
+  color: #555;
+}
+
+.section_box {
+  margin-bottom: 60px;
+}
+
+.section_box h3 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+/* highlight */
+.highlight {
+  background: #f7f9fc;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.allowance_box {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.weight strong {
+  font-size: 2.5rem;
+  display: block;
+}
+
+.weight span {
+  color: #ff6a00;
+  font-weight: bold;
+}
+
+.size p {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* lists */
+.rule_list,
+.storage_list {
+  padding-left: 18px;
+  line-height: 1.8;
+}
+
+.rule_list li,
+.storage_list li {
+  margin-bottom: 10px;
+}
+
+/* tables */
+.size_table,
+.fee_table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.size_table th,
+.size_table td,
+.fee_table th,
+.fee_table td {
+  border: 1px solid #eee;
+  padding: 14px;
+  text-align: left;
+}
+
+.size_table th,
+.fee_table th {
+  background: #fafafa;
+  width: 30%;
+}
+
+/* warning */
+.warning {
+  background: #fff5f5;
+  border-radius: 16px;
+  padding: 30px;
+}
+
+.danger_text {
+  margin-top: 15px;
+  color: #c00;
+  font-weight: bold;
+}
+
+.sub_text {
+  margin-top: 10px;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .allowance_box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

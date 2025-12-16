@@ -16,11 +16,7 @@
   height: 300px;
 }
 /* ceo */
-.ceo_intro_section .content_wrapper {
-  display: flex;
-  gap: 40px;
-  padding: 50px 0;
-}
+
 .intro_text_area {
   flex: 2;
   padding-top: 20px;
@@ -43,11 +39,32 @@
 }
 .activity_list {
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
-  margin: 0 auto;
+  margin: 20px auto;
   text-align: center;
 }
 .activity_list > div {
   padding: 15px 5px;
   border-top: 3px solid var(--sub-color);
+}
+@media(max-width:1024px){
+.intro_text_area{padding: top 0;}
+.eco_idea_item p {font-size: 1.4rem;}
+.eco_idea_item img {width: 300px;}
+.eco_ideas_list{flex-direction:column;gap:16px}
+.activity_list{gap:20px}
+}
+@media(max-width:768px){
+.intro_image_container{height:220px}
+.intro_left {flex-direction: column;}
+.eco_idea_item{padding:12px}
+.eco_idea_item h3{font-size:1.6rem}
+.activity_list>div{font-size:1.4rem}
+}
+@media(max-width:380px){
+.intro_image_container{display:none}
+.eco_idea_item h3{font-size:1.4rem}
+.eco_idea_item p{font-size:1.4rem}
+.activity_list>div{font-size:1.3rem;padding:12px 0}
 }

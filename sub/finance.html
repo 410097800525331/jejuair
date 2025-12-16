@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제주항공</title>
+  <link rel="ico" href="favicon.ico">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/finance.css">
+</head>
+
+<body>
+  <!-- ##### header ##### -->
+  <header id="header_wrap"></header>
+  <div class="ticket"></div>
+
+  <section class="jmember_zone">
+    <div class="inner">
+
+      <!-- header -->
+      <div class="zone_header">
+        <h2>J 멤버스 혜택존</h2>
+        <p>제주항공 예약 회원에게 드리는 더욱 강력한 혜택</p>
+      </div>
+
+      <!-- category -->
+      <div class="zone_category">
+        <button class="category_btn">전체</button>
+        <button class="category_btn">렌터카</button>
+        <button class="category_btn">호텔/숙소</button>
+        <button class="category_btn active">금융/여행자보험</button>
+        <button class="category_btn">골프/투어</button>
+        <button class="category_btn">공항편의</button>
+        <button class="category_btn">관광</button>
+        <button class="category_btn">먹거리</button>
+        <button class="category_btn">콘텐츠</button>
+      </div>
+
+      <!-- benefit list -->
+      <div class="benefit_list">
+
+        <!-- card 1 -->
+        <div class="benefit_card">
+          <div class="benefit_top">
+            <span class="brand">신한EZ손해보험</span>
+            <span class="tag">금융/여행자보험</span>
+          </div>
+
+          <h3>국내/해외 여행보험</h3>
+          <p class="sub">편안한 여행의 시작, 여행보험 준비는 필수</p>
+
+          <p class="desc">
+            국내여행, 해외여행, 출장 등의 목적으로 주거지를 출발하여 여행을
+            마치고 주거지에 도착할 때까지 발생되는 상해사고, 질병 등 위험을
+            보장해주는 보험입니다. (특약 가입 시)
+          </p>
+
+          <ul class="info">
+            <li>콜센터: 1544-2580 (09:00~18:00)</li>
+            <li>준법감시인 확인필 제2025-1100246</li>
+            <li>유효기간: 2025.10.17 ~ 2026.10.16</li>
+          </ul>
+
+          <div class="hash">
+            <span>#제휴이벤트</span>
+            <span>#보험상품</span>
+          </div>
+
+          <div class="benefit_bottom">
+            <span class="date">2025.05.15 ~ 2025.12.31</span>
+            <a href="#" class="link_btn">바로가기</a>
+          </div>
+        </div>
+
+        <!-- card 2 -->
+        <div class="benefit_card">
+          <div class="benefit_top">
+            <span class="brand">하나은행</span>
+            <span class="tag">금융/여행자보험</span>
+          </div>
+
+          <h3>USD 최대 90% 환율 우대</h3>
+          <p class="sub">12개 통화 당일 환전 · 당일 수령</p>
+
+          <p class="desc">
+            모바일 전용 환전 서비스로 간편하게 신청하고
+            공항에서 빠르게 수령하세요.
+          </p>
+
+          <ul class="info">
+            <li>본 홍보물은 2026.09.30까지 유효</li>
+            <li>PC: 준법감시인 심의필 제2025-광고-10747호</li>
+            <li>MO: 준법감시인 심의필 제2025-광고-10748호</li>
+          </ul>
+
+          <div class="benefit_bottom">
+            <span class="date">2025.10.01 ~ 2026.09.30</span>
+            <a href="#" class="link_btn">바로가기</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <script>
+    const categoryBtns = document.querySelectorAll(".category_btn");
+
+    categoryBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        categoryBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        // 실제 서비스에서는 여기서 필터링 로직 연결
+      });
+    });
+
+  </script>
+
+  <!-- ##### footer ##### -->
+  <footer id="footer_wrap"></footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="/js/header.js"></script>
+  <script src="/js/footer.js"></script>
+  <script src="/js/ticket.js"></script>
+</body>
+
+</html>

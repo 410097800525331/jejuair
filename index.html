@@ -40,54 +40,9 @@
     </div>
   </section>
 
-  <!-- ##### other ##### -->
-  <section class="other_wrap">
-    <div class="inner">
-      <div class="other_img">
-        <img id="main_image" src="/assets/img/main/section_discount_01.avif" alt="호텔/숙소">
-        <div class="main_label" id="main_label">호텔 / 숙소</div>
-      </div>
-      <div class="promo_info">
-        <p>J Members Benefits Zone</p>
-        <h2>J 멤버스 혜택존을 경험해 보세요.</h2>
-        <a class="allmore_btn" href="#">전체보기</a>
-        <!-- promo thumb -->
-        <div class="promo_thumb">
-          <div class="thumb_item active" data-img="/assets/img/main/section_discount_01.avif" data-label="호텔 / 숙소">
-            <img src="/assets/img/main/section_discount_01.avif" alt="호텔 / 숙소">
-          </div>
-          <div class="thumb_item" data-img="/assets/img/main/section_discount_02.avif" data-label="렌터카">
-            <img src="/assets/img/main/section_discount_02.avif" alt="렌터카">
-          </div>
-          <div class="thumb_item" data-img="/assets/img/main/section_discount_03.jpg" data-label="금융 / 여행자 보험">
-            <img src="/assets/img/main/section_discount_03.jpg" alt="금융 / 여행자 보험">
-          </div>
-          <div class="thumb_item" data-img="/assets/img/main/section_discount_04.avif" data-label="골프 멤버십">
-            <img src="/assets/img/main/section_discount_04.avif" alt="골프 멤버십">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <script>
-    const thumbs = document.querySelectorAll(".promo_thumb .thumb_item");
-    const mainImage = document.getElementById("main_image");
-    const mainLabel = document.getElementById("main_label");
-
-    thumbs.forEach(thumb => {
-      thumb.addEventListener("click", () => {
-        thumbs.forEach(item => item.classList.remove("active"));
-        thumb.classList.add("active");
-
-        mainImage.src = thumb.dataset.img;
-        mainLabel.textContent = thumb.dataset.label;
-      });
-    });
-  </script>
-
   <!-- ##### tab ##### -->
   <section class="convenience_wrap">
-    <div class="inner">
+    <div class="inner convenience">
       <div class="tab_img">
         <p>Travel</p>
         <h2>여행에 편리함을 더해보세요.</h2>
@@ -228,7 +183,7 @@
   <footer id="footer_wrap"></footer>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="/js/toggle_active.js"></script>
+  <!-- <script src="/js/toggle_active.js"></script> -->
   <script src="/js/header.js"></script>
   <script src="/js/footer.js"></script>
   <script src="/js/ticket.js"></script>

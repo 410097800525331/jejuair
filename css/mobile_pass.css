@@ -1,0 +1,197 @@
+@charset "utf-8";
+
+.mobile_boarding_wrap {
+  background: #f7f9fc;
+  padding: 60px 0;
+  font-family: "Pretendard", sans-serif;
+}
+
+.inner {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* header */
+.page_header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.page_header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.page_header p {
+  margin: 10px 0 20px;
+  color: #666;
+}
+
+.login_btn {
+  padding: 10px 28px;
+  border-radius: 30px;
+  border: none;
+  background: #ff5a00;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* time info */
+.time_info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.time_cards {
+  display: flex;
+  gap: 20px;
+}
+
+.time_card {
+  flex: 1;
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+}
+
+.time_card h3 {
+  margin-bottom: 10px;
+}
+
+.time_card span {
+  display: block;
+  margin: 8px 0;
+  color: #aaa;
+}
+
+/* restriction */
+.restriction_box {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  margin: 40px 0;
+}
+
+.restriction_box h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.restriction_box ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.restriction_box li {
+  margin-bottom: 8px;
+}
+
+.restriction_box span {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.restriction_note {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* notice */
+.notice_box {
+  background: #fff7f2;
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin-bottom: 40px;
+  font-size: 0.95rem;
+}
+
+/* search */
+.search_wrap {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.search_wrap h2 {
+  font-size: 1.5rem;
+}
+
+.search_wrap .desc {
+  margin: 10px 0 30px;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.search_form .form_row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.search_form label {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.search_form input {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.passenger_box {
+  margin-top: 30px;
+}
+
+.passenger_box h3 {
+  margin-bottom: 6px;
+}
+
+.passenger_box p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 14px;
+}
+
+.name_row {
+  display: flex;
+  gap: 10px;
+}
+
+.add_btn {
+  padding: 0 16px;
+  border-radius: 10px;
+  border: 1px solid #ff5a00;
+  background: #fff;
+  color: #ff5a00;
+  cursor: pointer;
+}
+
+/* submit */
+.submit_btn {
+  margin-top: 40px;
+  width: 100%;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  background: #ff5a00;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .time_cards {
+    flex-direction: column;
+  }
+
+  .name_row {
+    flex-direction: column;
+  }
+}

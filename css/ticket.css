@@ -42,10 +42,21 @@
   filter: brightness(0) invert(1);
 }
 /* tab */
-.tab_content {
+.ticket_tab_content {
   display: none;
 }
-.tab_content.active {
+.ticket_tab_content.active {
+  display: block;
+}
+/* 메인 탭만 제어 */
+.ticket_tab_content {
+  display: none;
+}
+.ticket_tab_content.active {
+  display: block;
+}
+#tab_booking .ticket_top[data-tab="tab_round"],
+#tab_flight .ticket_bottom[data-sub="schedule"] {
   display: block;
 }
 .tab_sub,
@@ -81,7 +92,19 @@
   padding: 20px;
 }
 /* tab sub */
-.sub_tab_btn {
+.ticket_sub_tab_btn {
+  margin: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.ticket_sub_tab_btn.active {
+  border-radius: 12px;
+  padding: 4px 0;
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+}
+/* .sub_tab_btn {
   margin: 10px;
 }
 .sub_tab_btn.active {
@@ -89,7 +112,7 @@
   padding: 4px 0;
   border: 1px solid var(--main-color);
   color: var(--main-color);
-}
+} */
 /* 커팅 선 */
 .ticket_cutline {
   border-top: 2px dashed var(--text-sub);

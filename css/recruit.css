@@ -61,3 +61,26 @@
 .date {
   font-size: 13px;
 }
+@media(max-width:1024px){
+.recruit_item{padding:18px 20px}
+.recruit_title{font-size:1.6rem}
+.recruit_info{gap:10px;font-size:1.3rem}
+.recruit_right{min-width:100px}
+}
+@media(max-width:768px){
+.recruit_item{flex-direction:column;align-items:flex-start;gap:16px}
+.recruit_text {font-size: 1.5rem;}
+.recruit_right{text-align:left;min-width:auto}
+.recruit_title{font-size:1.5rem}
+.recruit_info{flex-wrap:wrap;font-size:1.3rem}
+.d_day{font-size:1.4rem}
+}
+@media(max-width:576px){
+.recruit_item{padding:16px}
+.recruit_img::after{background:rgba(0,0,0,.35)}
+.recruit_img {display: none;}
+.recruit_text{left:20px;top:80%}
+.recruit_title{font-size:1.4rem}
+.recruit_info{font-size:1.2rem}
+.date{font-size:1.2rem}
+}

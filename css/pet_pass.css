@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+.pet_membership_wrap {
+  padding: 80px 0;
+  font-size: 1rem;
+}
+
+.pet_membership_wrap .inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* tab */
+.pet_tab_menu {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.pet_tab_btn {
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.pet_tab_btn.active {
+  background: #ff6a00;
+  color: #fff;
+  border-color: #ff6a00;
+}
+
+/* tab content */
+.pet_tab_content {
+  display: none;
+}
+
+.pet_tab_content.active {
+  display: block;
+}
+
+/* common */
+.page_intro {
+  margin-bottom: 40px;
+}
+
+.page_intro h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.section_box {
+  margin-bottom: 50px;
+}
+
+.section_box h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.benefit_cards {
+  display: flex;
+  gap: 20px;
+}
+
+.benefit_card {
+  flex: 1;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.benefit_card.premium {
+  border-color: #ff6a00;
+}
+
+.benefit_card h4 {
+  margin-bottom: 10px;
+}
+
+.benefit_card ul {
+  padding-left: 18px;
+}
+
+/* price */
+.price_table {
+  display: flex;
+  gap: 20px;
+}
+
+.price_item {
+  flex: 1;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.price del {
+  color: #999;
+  margin-right: 10px;
+}
+
+.price strong {
+  font-size: 1.4rem;
+  color: #ff6a00;
+}
+
+/* step */
+.step_list {
+  display: flex;
+  gap: 20px;
+}
+
+.step_list li {
+  flex: 1;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.step_list span {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* notice */
+.notice_box {
+  background: #fafafa;
+  padding: 30px;
+  border-radius: 16px;
+}
+
+.notice_box ul {
+  padding-left: 18px;
+}
+
+/* button */
+.btn_area {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.primary_btn {
+  padding: 16px 40px;
+  background: #ff6a00;
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+  .benefit_cards,
+  .price_table,
+  .step_list {
+    flex-direction: column;
+  }
+}

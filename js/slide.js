@@ -13,33 +13,37 @@ $(sildeDatas).each((idx, data) => {
   $(".slides").append(silde);
 });
 
-window.addEventListener("load", function () {
-  const slides = document.querySelector(".slides");
-  const items = document.querySelectorAll(".slide_item");
+window.addEventListener("load", () => {
+  const slides = document.querySelector(".slides")
+  let items = document.querySelectorAll(".slide_item")
+  let index = 0
+  let slideWidth
 
-  let index = 0;
-  const slideWidth = items[0].offsetWidth;
+  const clone = items[0].cloneNode(true)
+  slides.appendChild(clone)
 
-  // 첫 번째 슬라이드 복제
-  const clone = items[0].cloneNode(true);
-  slides.appendChild(clone);
-
-  const total = document.querySelectorAll(".slide_item").length;
-
-  function moveSlide() {
-    index++;
-    slides.style.transition = "transform 1s ease";
-    slides.style.transform = `translateX(-${index * slideWidth}px)`;
+  function setWidth() {
+    items = document.querySelectorAll(".slide_item")
+    slideWidth = document.querySelector("#slide_wrap").offsetWidth
+    items.forEach(item => item.style.width = slideWidth + "px")
+    slides.style.transform = `translateX(-${index * slideWidth}px)`
   }
 
-  // transition이 끝난 뒤 자연스럽게 리셋
-  slides.addEventListener("transitionend", () => {
-    if (index === total - 1) {
-      slides.style.transition = "none";
-      slides.style.transform = "translateX(0)";
-      index = 0;
-    }
-  });
+  function moveSlide() {
+    index++
+    slides.style.transition = "transform 1s ease"
+    slides.style.transform = `translateX(-${index * slideWidth}px)`
+  }
 
-  setInterval(moveSlide, 2500);
-});
+  slides.addEventListener("transitionend", () => {
+    if (index === items.length - 1) {
+      slides.style.transition = "none"
+      slides.style.transform = "translateX(0)"
+      index = 0
+    }
+  })
+
+  window.addEventListener("resize", setWidth)
+  setWidth()
+  setInterval(moveSlide, 2500)
+})

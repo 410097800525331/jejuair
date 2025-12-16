@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제주항공</title>
+  <link rel="ico" href="favicon.ico">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/lost.css">
+</head>
+
+<body>
+  <!-- ##### header ##### -->
+  <header id="header_wrap"></header>
+  <div class="ticket"></div>
+
+  <section class="lost_baggage_wrap">
+  <div class="inner">
+
+    <header class="page_header">
+      <h1>수하물 분실 및 배상</h1>
+      <p>여행 중 수하물을 분실하셨나요?</p>
+    </header>
+
+    <div class="service_tabs">
+      <button class="tab_btn active">수하물 분실</button>
+      <button class="tab_btn">수하물 배상</button>
+    </div>
+
+    <div class="guide_box">
+      <h2>이렇게 대처하세요!</h2>
+      <ul>
+        <li>분실하신 수하물은 <strong>도착지 공항</strong>을 기준으로 확인해 주세요.</li>
+        <li>제주항공 규정에 따라 <strong>30일이 지나면 유실물은 폐기</strong>될 수 있습니다.</li>
+        <li>분실한 물품은 각 공항 <strong>유실물 관련 기관</strong>에 문의해 주세요.</li>
+      </ul>
+    </div>
+
+    <div class="table_wrap">
+      <h2>공항 유실물 센터</h2>
+      <table class="lost_table">
+        <thead>
+          <tr>
+            <th>공항</th>
+            <th>전화번호</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>인천공항</td>
+            <td>032-741-3110</td>
+          </tr>
+          <tr>
+            <td>제주공항</td>
+            <td>064-797-2521</td>
+          </tr>
+          <tr>
+            <td>김포공항</td>
+            <td>02-2660-4097</td>
+          </tr>
+          <tr>
+            <td>청주공항</td>
+            <td>043-210-6328</td>
+          </tr>
+          <tr>
+            <td>김해공항</td>
+            <td>051-974-3776</td>
+          </tr>
+          <tr>
+            <td>대구공항</td>
+            <td>053-980-5230</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="action_box">
+      <button class="search_btn">유실물 조회</button>
+    </div>
+
+  </div>
+</section>
+<script>
+  document.querySelector(".search_btn").addEventListener("click", () => {
+    alert("유실물 조회 페이지로 이동합니다.");
+    // location.href = "/lost-and-found";
+  });
+</script>
+
+
+  
+  <!-- ##### footer ##### -->
+  <footer id="footer_wrap"></footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="/js/header.js"></script>
+  <script src="/js/footer.js"></script>
+  <script src="/js/ticket.js"></script>
+</body>
+
+</html>

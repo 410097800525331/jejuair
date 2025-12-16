@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제주항공</title>
+  <link rel="ico" href="favicon.ico">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/pet_pass.css">
+</head>
+
+<body>
+  <!-- ##### header ##### -->
+  <header id="header_wrap"></header>
+  <div class="ticket"></div>
+
+  <section class="pet_membership_wrap">
+    <div class="inner">
+
+      <!-- tab menu -->
+      <div class="pet_tab_menu">
+        <button class="pet_tab_btn active" data-tab="membership">펫 멤버십</button>
+        <button class="pet_tab_btn" data-tab="pass">펫 패스</button>
+      </div>
+
+      <!-- ================= 펫 멤버십 ================= -->
+      <div class="pet_tab_content active" id="membership">
+
+        <div class="page_intro">
+          <h2>펫 멤버십</h2>
+          <p>반려동물과의 설레는 여행, 합리적이고 간편하게!</p>
+        </div>
+
+        <div class="section_box">
+          <h3>펫 멤버십이란?</h3>
+          <p>
+            오직 제주항공에서만 경험할 수 있는 펫 멤버십에 가입해 보세요.<br>
+            반려동물과 단 1회만 탑승하더라도 합리적인 가격과 풍성한 혜택을 경험할 수 있습니다.<br>
+            멤버십은 가입 다음날부터 1년간 유효합니다.
+          </p>
+        </div>
+
+        <div class="section_box">
+          <h3>혜택 안내</h3>
+          <p class="desc">
+            펫 멤버십의 공식 명칭은 <strong>댕댕스탠다드</strong>, <strong>댕댕프리미엄</strong>입니다.
+          </p>
+
+          <div class="benefit_cards">
+            <div class="benefit_card premium">
+              <h4>댕댕프리미엄</h4>
+              <p>제주항공 X 서루 프리미엄 펫 케이지 포함</p>
+              <ul>
+                <li>반려동물 요금 1년 무제한 무료</li>
+                <li>위탁수하물 5KG 추가</li>
+                <li>도착지 수하물 우선 찾기</li>
+                <li>23만원 상당 펫 케이지 + 3만원 쿠션</li>
+              </ul>
+            </div>
+
+            <div class="benefit_card">
+              <h4>댕댕스탠다드</h4>
+              <p>기본 혜택 제공 (펫 케이지 미포함)</p>
+              <ul>
+                <li>반려동물 요금 1년 무제한 무료</li>
+                <li>위탁수하물 5KG 추가</li>
+                <li>도착지 수하물 우선 찾기</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="section_box">
+          <h3>이용료 안내</h3>
+
+          <div class="price_table">
+            <div class="price_item">
+              <h4>[고급형] 댕댕프리미엄</h4>
+              <p class="price">
+                <del>370,000원</del>
+                <strong>240,000원</strong>
+              </p>
+            </div>
+
+            <div class="price_item">
+              <h4>[기본형] 댕댕스탠다드</h4>
+              <p class="price">
+                <del>140,000원</del>
+                <strong>98,000원</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section_box">
+          <h3>이용 방법</h3>
+
+          <ol class="step_list">
+            <li>
+              <span>STEP 01</span>
+              온라인 회원가입 후 펫 멤버십 구매
+            </li>
+            <li>
+              <span>STEP 02</span>
+              출발지 공항 수속 카운터 방문
+            </li>
+            <li>
+              <span>STEP 03</span>
+              펫 멤버십 혜택 이용
+            </li>
+          </ol>
+        </div>
+
+        <div class="notice_box">
+          <h3>유의사항</h3>
+          <ul>
+            <li>펫 멤버십은 제주항공 회원 본인만 사용 가능합니다.</li>
+            <li>구매 다음날부터 사용 가능하며, 구매 당일 사용은 불가합니다.</li>
+            <li>혜택은 반려동물 동반 탑승 시에만 제공됩니다.</li>
+            <li>우선 수하물 서비스는 유인 카운터에서만 제공됩니다.</li>
+          </ul>
+        </div>
+
+        <div class="btn_area">
+          <button class="primary_btn">상품 선택하기</button>
+        </div>
+
+      </div>
+
+      <!-- ================= 펫 패스 ================= -->
+      <div class="pet_tab_content" id="pass">
+        <div class="page_intro">
+          <h2>펫 패스</h2>
+          <p>반려동물과 함께하는 여행을 더 간편하게 이용해 보세요.</p>
+        </div>
+
+        <div class="section_box">
+          <p>
+            펫 패스는 단일 여행 시 반려동물 탑승을 보다 간편하게 이용할 수 있는 서비스입니다.<br>
+            멤버십 가입 없이도 필요한 순간에 합리적으로 이용하실 수 있습니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <script>
+    const tabBtns = document.querySelectorAll(".pet_tab_btn");
+    const tabContents = document.querySelectorAll(".pet_tab_content");
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const target = btn.dataset.tab;
+
+        tabBtns.forEach(b => b.classList.remove("active"));
+        tabContents.forEach(c => c.classList.remove("active"));
+
+        btn.classList.add("active");
+        document.getElementById(target).classList.add("active");
+      });
+    });
+
+  </script>
+
+  <!-- ##### footer ##### -->
+  <footer id="footer_wrap"></footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="/js/header.js"></script>
+  <script src="/js/footer.js"></script>
+  <script src="/js/ticket.js"></script>
+</body>
+
+</html>

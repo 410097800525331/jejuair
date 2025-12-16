@@ -1,5 +1,5 @@
 @charset "utf-8";
-
+/* max-width: 1024, 768, 380 반응형 만들어줘 */
 @font-face {
   font-family: 'FlightSans';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/FlightSans-Regular.woff2') format('woff2');
@@ -46,8 +46,13 @@ section {
   margin: 80px 0 60px;
 }
 .inner {
-  width: 1400px;
+  max-width: 1400px;
   margin: 0 auto;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 h1,
 .color {
@@ -111,6 +116,32 @@ input[type="radio"] {
   color: var(--main-color);
   background: var(--sub-color);
   border: 1px solid var(--main-color);
+}
+@media (max-width:1024px){
+  .inner {
+    padding: 0 20px;
+  }
+  p {
+    font-size: 1.4rem;
+  }
+  h1 {
+    font-size: 1.7rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  h4 {
+    font-size: 1.3rem;
+  }
+  .allmore_btn {
+    font-size: 1.2rem;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+  }
 }
 
 /* reset */

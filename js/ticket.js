@@ -6,17 +6,17 @@ $(document).ready(function () {
     <div class="ticket_wrap">
       <!-- tab -->
       <div class="tab_menu">
-        <div class="tab_btn active" data-tab="tab_booking">항공권 예매</div>
-        <div class="tab_btn" data-tab="tab_reserve">예약 조회</div>
-        <div class="tab_btn" data-tab="tab_flight">운항 조회</div>
+        <div class="ticket_tab_btn active" data-tab="tab_booking">항공권 예매</div>
+        <div class="ticket_tab_btn" data-tab="tab_reserve">예약 조회</div>
+        <div class="ticket_tab_btn" data-tab="tab_flight">운항 조회</div>
       </div>
       <!-- ticket tab1 -->
-      <div id="tab_booking" class="tab_content active">
+      <div id="tab_booking" class="ticket_tab_content active">
         <!-- tab sub -->
         <div class="tab_sub">
-          <button class="sub_tab_btn active" data-tab="tab_round">왕복</button>
-          <button class="sub_tab_btn" data-tab="tab_oneway">편도</button>
-          <button class="sub_tab_btn"><a href="#">다구간</a></button>
+          <button class="ticket_sub_tab_btn active" data-tab="tab_round">왕복</button>
+          <button class="ticket_sub_tab_btn" data-tab="tab_oneway">편도</button>
+          <button class="ticket_sub_tab_btn"><a href="#">다구간</a></button>
         </div>
         <!-- ticket top -->
         <div class="ticket_top" data-tab="tab_round">
@@ -69,9 +69,9 @@ $(document).ready(function () {
           <div class="pay_method">
             <label>결제 방법</label>
             <div class="pay_options">
-              <label><input type="radio" name="pay" checked> 일반</label>
-              <label><input type="radio" name="pay"> 포인트</label>
-              <label><input type="radio" name="pay"> 기프티켓</label>
+              <label><input type="radio" name="booking_pay" checked> 일반</label>
+              <label><input type="radio" name="booking_pay"> 포인트</label>
+              <label><input type="radio" name="booking_pay"> 기프티켓</label>
             </div>
           </div>
           <div class="discount_row">
@@ -85,7 +85,7 @@ $(document).ready(function () {
         </div>
       </div>
       <!-- ticket tab2 -->
-      <div id="tab_reserve" class="tab_content">
+      <div id="tab_reserve" class="ticket_tab_content">
         <div class="ticket_top">
           <div class="ticketing_target">
             <div class="input_box">
@@ -129,11 +129,11 @@ $(document).ready(function () {
         </div>
       </div>
       <!-- ticket tab3 -->
-      <div id="tab_flight" class="tab_content">
+      <div id="tab_flight" class="ticket_tab_content">
         <!-- tab sub -->
         <div class="tab_sub">
-          <button class="sub_tab_btn active" data-sub="schedule">운항스케줄</button>
-          <button class="sub_tab_btn" data-sub="current">출도착현황</button>
+          <button class="ticket_sub_tab_btn active" data-sub="schedule">운항스케줄</button>
+          <button class="ticket_sub_tab_btn" data-sub="current">출도착현황</button>
         </div>
         <div class="ticket_top">
           <div class="ticketing_target">
@@ -163,8 +163,8 @@ $(document).ready(function () {
           </div>
           <div class="pay_method">
             <div class="pay_options">
-              <label><input type="radio" name="pay" checked> 왕복</label>
-              <label><input type="radio" name="pay"> 편도</label>
+              <label><input type="radio" name="flight_type" checked> 왕복</label>
+              <label><input type="radio" name="flight_type"> 편도</label>
             </div>
           </div>
           <div class="search">
@@ -181,8 +181,8 @@ $(document).ready(function () {
           </div>
           <div class="pay_method">
             <div class="pay_options">
-              <label><input type="radio" name="pay" checked> 구간 조회</label>
-              <label><input type="radio" name="pay"> 편명 조회</label>
+              <label><input type="radio" name="flight_search" checked> 구간 조회</label>
+              <label><input type="radio" name="flight_search"> 편명 조회</label>
             </div>
           </div>
           <div class="search">
@@ -195,19 +195,42 @@ $(document).ready(function () {
 
   $(".ticket").append(ticketHTML);
 
+  /* ===============================
+     패널 상태 복원
+  =============================== */
+  const ticketEl = document.querySelector('.ticket');
+  const panelBtn = document.querySelector('.panel_toggle_btn');
+  const ticketPanel = document.querySelector('.ticket_panel');
+
+  const panelState = localStorage.getItem('ticket_panel_state');
+
+  if (panelState === 'closed') {
+    ticketEl.classList.add('hidden');
+    panelBtn.classList.add('active');
+    ticketPanel.classList.add('active');
+  }
+
+  panelBtn.addEventListener('click', () => {
+    ticketEl.classList.toggle('hidden');
+    panelBtn.classList.toggle('active');
+    ticketPanel.classList.toggle('active');
+
+    const isHidden = ticketEl.classList.contains('hidden');
+    localStorage.setItem('ticket_panel_state', isHidden ? 'closed' : 'open');
+  });
 
   /* ===============================
-     탭 버튼
+     메인 탭 (항공권 / 예약 / 운항)
   =============================== */
-  const tabBtns = document.querySelectorAll('.tab_btn');
-  const tabContents = document.querySelectorAll('.tab_content');
+  const mainTabs = document.querySelectorAll('.ticket_tab_btn');
+  const mainContents = document.querySelectorAll('.ticket_tab_content');
 
-  tabBtns.forEach(btn => {
+  mainTabs.forEach(btn => {
     btn.addEventListener('click', () => {
       const target = btn.dataset.tab;
 
-      tabBtns.forEach(b => b.classList.remove('active'));
-      tabContents.forEach(c => c.classList.remove('active'));
+      mainTabs.forEach(b => b.classList.remove('active'));
+      mainContents.forEach(c => c.classList.remove('active'));
 
       btn.classList.add('active');
       document.getElementById(target).classList.add('active');
@@ -215,26 +238,13 @@ $(document).ready(function () {
   });
 
   /* ===============================
-     패널 토글
-  =============================== */
-  const ticketEl = document.querySelector('.ticket');
-  const panelBtn = document.querySelector('.panel_toggle_btn');
-  const ticketPanel = document.querySelector('.ticket_panel');
-
-  panelBtn.addEventListener('click', () => {
-    ticketEl.classList.toggle('hidden');
-    panelBtn.classList.toggle('active');
-    ticketPanel.classList.toggle('active');
-  });
-
-  /* ===============================
-     서브탭 (왕복 / 편도)
+     항공권 예매 서브탭 (왕복 / 편도)
   =============================== */
   const bookingTab = document.querySelector('#tab_booking');
 
   if (bookingTab) {
-    const subBtns = bookingTab.querySelectorAll('.sub_tab_btn[data-tab]');
-    const ticketTops = bookingTab.querySelectorAll('.ticket_top');
+    const subBtns = bookingTab.querySelectorAll('.ticket_sub_tab_btn[data-tab]');
+    const ticketTops = bookingTab.querySelectorAll('.ticket_top[data-tab]');
 
     subBtns.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -259,8 +269,12 @@ $(document).ready(function () {
   const flightTab = document.querySelector('#tab_flight');
 
   if (flightTab) {
-    const subBtns = flightTab.querySelectorAll('.sub_tab_btn');
+    const subBtns = flightTab.querySelectorAll('.ticket_sub_tab_btn[data-sub]');
     const bottoms = flightTab.querySelectorAll('.ticket_bottom[data-sub]');
+
+    // 초기 상태
+    bottoms.forEach(b => b.style.display = 'none');
+    flightTab.querySelector('.ticket_bottom[data-sub="schedule"]').style.display = 'block';
 
     subBtns.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -273,10 +287,7 @@ $(document).ready(function () {
         flightTab.querySelector(`.ticket_bottom[data-sub="${target}"]`).style.display = 'block';
       });
     });
-
-    bottoms.forEach(b => {
-      if (b.dataset.sub !== 'schedule') b.style.display = 'none';
-    });
   }
+
 
 });
