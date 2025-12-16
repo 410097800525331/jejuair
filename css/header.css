@@ -35,6 +35,7 @@
   position: fixed;
   top: 0; left: 50%;
   transform: translateX(-50%);
+  width: 100%;
   max-width: 1400px;
   background: #fff;
   z-index: 999;
@@ -232,4 +233,26 @@
   .nav_icons {
     display: none;
   }
+}
+
+/* top btn */
+#topBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+  display: none; /* 처음에는 숨김 */
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: opacity 0.3s ease;
+}
+#topBtn:hover {
+  background-color: #e65500;
 }

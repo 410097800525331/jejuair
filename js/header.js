@@ -176,9 +176,32 @@ $(document).ready(function () {
       <a href="#">한국어</a>
     </div>
   </div>
+  
+    <button id="topBtn" title="맨 위로">↑</button>
   `;
 
   $("#header_wrap").append(header);
+
+  // 탑 버튼 요소 선택
+  const topBtn = document.getElementById("topBtn");
+
+  // 스크롤 이벤트: 300px 이상 내려가면 버튼 보이기
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+  });
+
+  // 클릭 시 부드럽게 맨 위로 이동
+  topBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+
 
   // 햄버거 열기/닫기
   $(document).on("click", ".hamburger_btn", function () {
