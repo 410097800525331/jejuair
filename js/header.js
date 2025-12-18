@@ -62,7 +62,6 @@ $(document).ready(function () {
                     <li><a href="/sub/processing.html">빠른 수속</a></li>
                     <li><a href="/sub/mobile_pass.html">모바일 탑승권</a></li>
                     <li><a href="/sub/oath.html">사전 서약서</a></li>
-                    <li><a href="/sub/Immigration_report.html">출입국 신고서</a></li>
                   </ul>
                 </div>
                 <div class="sub_menu">
@@ -140,7 +139,6 @@ $(document).ready(function () {
           <li><a href="/sub/processing.html">빠른 수속</a></li>
           <li><a href="/sub/mobile_pass.html">모바일 탑승권</a></li>
           <li><a href="/sub/oath.html">사전 서약서</a></li>
-          <li><a href="/sub/Immigration_report.html">출입국 신고서</a></li>
         </ul>
       </li>
       <li>
