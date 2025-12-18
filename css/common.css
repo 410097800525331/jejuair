@@ -80,9 +80,11 @@ input[type="radio"] {
   width: 100%;
   padding: 8px 0;
   background: var(--main-color);
+  border: 1px solid var(--main-color);
   color: #fff;
   border-radius: 12px;
   font-size: 1.6rem;
+  margin: 20px 0;
   font-weight: 700;
 }
 .inner2 .btn:hover {
@@ -106,8 +108,7 @@ input[type="radio"] {
   background: #fff;
 }
 .allmore_btn {
-  width: 140px;
-  height: 42px;
+  padding: 2px 24px;
   border-radius: 22px;
   margin-top: 20px;
   text-align: center;
@@ -140,6 +141,9 @@ input[type="radio"] {
   .inner {
     padding: 0 20px;
   }
+  .inner2 {
+    padding: 0 20px;
+  }
   p {
     font-size: 1.4rem;
   }
@@ -154,12 +158,6 @@ input[type="radio"] {
   }
   h4 {
     font-size: 1.3rem;
-  }
-  .allmore_btn {
-    font-size: 1.2rem;
-    width: 90px;
-    height: 30px;
-    line-height: 30px;
   }
 }
 

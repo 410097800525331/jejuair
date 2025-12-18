@@ -223,6 +223,9 @@
   font-size: 1.4rem;
 }
 @media (max-width: 1024px) {
+  .logo {
+    width: 140px;
+  }
   .top_bar_container,
   .nav_menu_wrap {
     display: none;
