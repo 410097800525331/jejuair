@@ -1,5 +1,12 @@
 @charset "utf-8";
 
+/* 소비자중심경영 */
+.ccm_effect img {
+  display: block;
+  width: 1200px;
+  margin: 0 auto;
+}
+
 /* 사전 수하물 */
 .page_intro {
   margin: 30px 0 20px;
@@ -74,11 +81,6 @@
 .fee_table th {
   background: #fafafa;
   width: 30%;
-}
-.warning {
-  background: #ff510011;
-  border-radius: 16px;
-  padding: 30px;
 }
 .danger_text {
   margin-top: 15px;

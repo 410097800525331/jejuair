@@ -58,6 +58,12 @@ section {
   justify-content: space-between;
   align-items: center;
 }
+.warning {
+  background: #ff510011;
+  border-radius: 16px;
+  padding: 30px;
+}
+
 h1,
 .color {
   color: var(--main-color);
