@@ -128,9 +128,9 @@ $(document).ready(function () {
         <button class="mobile_menu_btn">항공권 예매</button>
         <ul class="mobile_sub_menu">
           <li><a href="reservation.html">항공권 예매</a></li>
-          <li><a href="#">예약 조회</a></li>
-          <li><a href="#">운항 조회</a></li>
-          <li><a href="#">비회원 예약조회</a></li>
+          <li><a href="/sub/">예약 조회</a></li>
+          <li><a href="/sub/">운항 조회</a></li>
+          <li><a href="/sub/non_member.html">비회원 예약조회</a></li>
         </ul>
       </li>
       <li>

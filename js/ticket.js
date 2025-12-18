@@ -90,13 +90,13 @@ $(document).ready(function () {
           <div class="ticketing_target">
             <div class="input_box">
               <label>탑승객</label>
-              <input type="text" placeholder="성">
+              <input type="text" placeholder="성 (Last Name)">
               <img src="/assets/img/ico_person.svg" alt="icon">
             </div>
             <div class="arrow_btn"></div>
             <div class="input_box">
               <label>탑승객</label>
-              <input type="text" placeholder="이름">
+              <input type="text" placeholder="이름 (First Name)">
               <img src="/assets/img/ico_person.svg" alt="icon">
             </div>
           </div>

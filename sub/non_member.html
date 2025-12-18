@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제주항공</title>
+  <link rel="ico" href="favicon.ico">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/non_processing_mobile_pass.css">
+</head>
+
+<body>
+  <!-- ##### header ##### -->
+  <header id="header_wrap"></header>
+  <div class="ticket"></div>
+
+  <section class="non_member_wrap">
+    <form class="search_form">
+      <div class="form_row form_input">
+        <label><b>예약번호</b></label>
+        <input type="text" placeholder="예약번호 입력">
+      </div>
+      <div class="form_row form_input">
+        <label><b>탑승일자</b></label>
+        <input type="text" placeholder="YYYY.MM.DD">
+      </div>
+      <div class="passenger_box">
+        <h4>탑승객 정보 입력</h4>
+        <div class="name_row">
+          <input type="text" placeholder="성 (Last Name)">
+          <input type="text" placeholder="이름 (First Name)">
+          <button type="button" class="add_btn">추가</button>
+        </div>
+        <p>예약 시 입력한 탑승객명을 입력해 주세요. 국제선은 <strong>영문 탑승객명</strong>만 조회 가능합니다.</p>
+      </div>
+      <button type="submit" class="btn">조회</button>
+    </form>
+  </section>
+
+  <!-- ##### footer ##### -->
+  <footer id="footer_wrap"></footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="/js/header.js"></script>
+  <script src="/js/footer.js"></script>
+  <script src="/js/ticket.js"></script>
+</body>
+
+</html>
