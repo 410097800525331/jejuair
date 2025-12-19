@@ -50,10 +50,10 @@ $(document).ready(function () {
                 <div class="sub_menu">
                   <h4>예매 안내</h4>
                   <ul class="sub_menu">
-                    <li><a href="reservation.html">항공권 예매</a></li>
-                    <li><a href="#">예약 조회</a></li>
-                    <li><a href="#">운항 조회</a></li>
-                    <li><a href="#">비회원 예약조회</a></li>
+                    <li><a href="/sub/ticket_reservation.html">항공권 예매</a></li>
+                    <li><a href="/sub/reservation_inquiry.html">예약 조회</a></li>
+                    <li><a href="/sub/flight_status.html">운항 조회</a></li>
+                    <li><a href="/sub/non_member.html">비회원 예약조회</a></li>
                   </ul>
                 </div>
                 <div class="sub_menu">
@@ -127,9 +127,9 @@ $(document).ready(function () {
       <li>
         <button class="mobile_menu_btn">항공권 예매</button>
         <ul class="mobile_sub_menu">
-          <li><a href="reservation.html">항공권 예매</a></li>
-          <li><a href="/sub/">예약 조회</a></li>
-          <li><a href="/sub/">운항 조회</a></li>
+          <li><a href="/sub/ticket_reservation.html">항공권 예매</a></li>
+          <li><a href="/sub/reservation_inquiry.html">예약 조회</a></li>
+          <li><a href="/sub/flight_status.html">운항 조회</a></li>
           <li><a href="/sub/non_member.html">비회원 예약조회</a></li>
         </ul>
       </li>

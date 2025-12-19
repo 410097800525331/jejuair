@@ -7,7 +7,7 @@
   <title>제주항공</title>
   <link rel="ico" href="favicon.ico">
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/non_processing_mobile_pass.css">
+  <link rel="stylesheet" href="/css/ticket_reservation.css">
 </head>
 
 <body>
@@ -16,26 +16,40 @@
   <div class="ticket"></div>
 
   <section class="non_member_wrap">
-    <form class="search_form">
-      <div class="form_row form_input">
-        <label><b>예약번호</b></label>
-        <input type="text" placeholder="예약번호 입력">
-      </div>
-      <div class="form_row form_input">
-        <label><b>탑승일자</b></label>
-        <input type="text" placeholder="YYYY.MM.DD">
-      </div>
-      <div class="passenger_box">
-        <h4>탑승객 정보 입력</h4>
-        <div class="name_row">
-          <input type="text" placeholder="성 (Last Name)">
-          <input type="text" placeholder="이름 (First Name)">
-          <button type="button" class="add_btn">추가</button>
+    <div class="inner2">
+      <form class="search_form">
+        <div class="form_row form_input">
+          <label><b>예약번호</b></label>
+          <input type="text" placeholder="예약번호 입력">
         </div>
-        <p>예약 시 입력한 탑승객명을 입력해 주세요. 국제선은 <strong>영문 탑승객명</strong>만 조회 가능합니다.</p>
+        <div class="form_row form_input">
+          <label><b>탑승일자</b></label>
+          <input type="text" placeholder="YYYY.MM.DD">
+        </div>
+        <div class="passenger_box">
+          <h4>탑승객 정보 입력</h4>
+          <div class="name_row">
+            <input type="text" placeholder="성 (Last Name)">
+            <input type="text" placeholder="이름 (First Name)">
+            <button type="button" class="add_btn">추가</button>
+          </div>
+          <p>예약 시 입력한 탑승객명을 입력해 주세요. 국제선은 <strong>영문 탑승객명</strong>만 조회 가능합니다.</p>
+        </div>
+        <button type="submit" class="btn">조회</button>
+      </form>
+      <div class="warning">
+        <h3>유의사항</h3>
+        <div>
+          <p>- 홈페이지 로그인 없이 간편하게 예약조회가 가능합니다.</p>
+          <p>- 항공권 예약 변경 및 취소 문의는 해당 구매처로 문의바랍니다.</p>
+          <p>- 예약조회 후 부가서비스 구매 및 취소가 가능합니다.</p>
+          <p>- 부가서비스 구매 취소 내역 확인은, 예약 조회 후 확인 가능하시며, 탑승객 연락처가 존재할 경우에 한하여 부가서비스 구매/취소 확인서가 제공됩니다.</p>
+          <p>- 구매처별 부가서비스 구매가 제한될 수 있습니다.</p>
+          <p>- 부가서비스 추가 구매후 취소를 원하시는 경우, 부가서비스 선 취소 후 해당 여행사 또는 구매처를 통해 항공권 취소가 가능합니다.</p>
+          <p>- 항공권 구매처를 통해 여정확인서 발급이 가능합니다.</p>
+        </div>
       </div>
-      <button type="submit" class="btn">조회</button>
-    </form>
+    </div>
   </section>
 
   <!-- ##### footer ##### -->
