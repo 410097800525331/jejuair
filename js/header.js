@@ -51,9 +51,9 @@ $(document).ready(function () {
                   <h4>예매 안내</h4>
                   <ul class="sub_menu">
                     <li><a href="/sub/ticket_reservation.html">항공권 예매</a></li>
-                    <li><a href="/sub/reservation_inquiry.html">예약 조회</a></li>
-                    <li><a href="/sub/flight_status.html">운항 조회</a></li>
                     <li><a href="/sub/non_member.html">비회원 예약조회</a></li>
+                    <li><a href="/sub/pet.html">반려동물 운송 서비스</a></li>
+                    <li><a href="/sub/pet_pass.html">펫 멤버십 / 펫 패스</a></li>
                   </ul>
                 </div>
                 <div class="sub_menu">
@@ -78,8 +78,8 @@ $(document).ready(function () {
                   <ul class="sub_menu">
                   <li><a href="/sub/finance.html">금융/여행자 보험</a></li>
                   <li><a href="/sub/golf.html">골프 멤버십</a></li>
-                  <li><a href="/sub/pet.html">반려동물 운송 서비스</a></li>
-                  <li><a href="/sub/pet_pass.html">펫 멤버십 / 펫 패스</a></li>
+                  <li><a href="/sub/convenience.html">공항 편의</a></li>
+                  <li><a href="/sub/sightseeing.html">관광</a></li>
                   </ul>
                 </div>
                 <div class="sub_menu">
@@ -128,9 +128,9 @@ $(document).ready(function () {
         <button class="mobile_menu_btn">항공권 예매</button>
         <ul class="mobile_sub_menu">
           <li><a href="/sub/ticket_reservation.html">항공권 예매</a></li>
-          <li><a href="/sub/reservation_inquiry.html">예약 조회</a></li>
-          <li><a href="/sub/flight_status.html">운항 조회</a></li>
           <li><a href="/sub/non_member.html">비회원 예약조회</a></li>
+          <li><a href="/sub/pet.html">반려동물 운송 서비스</a></li>
+          <li><a href="/sub/pet_pass.html">펫 멤버십 / 펫 패스</a></li>
         </ul>
       </li>
       <li>
@@ -155,8 +155,8 @@ $(document).ready(function () {
         <ul class="mobile_sub_menu">
           <li><a href="/sub/finance.html">금융/여행자 보험</a></li>
           <li><a href="/sub/golf.html">골프 멤버십</a></li>
-          <li><a href="/sub/pet.html">반려동물 운송 서비스</a></li>
-          <li><a href="/sub/pet_pass.html">펫 멤버십 / 펫 패스</a></li>
+          <li><a href="/sub/convenience.html">공항 편의</a></li>
+          <li><a href="/sub/sightseeing.html">관광</a></li>
         </ul>
       </li>
       <li>
