@@ -9,8 +9,8 @@ $(document).ready(function () {
         <a href="/sub/notic.html">공지사항</a>
       </div>
       <div class="top_bar_right">
-        <a href="#">로그인</a>
-        <a href="#">회원가입</a>
+        <a href="/sub/login.html">로그인</a>
+        <a href="/sub/join.html">회원가입</a>
         <div class="language_selector">
           <a href="#">한국어</a>
         </div>
@@ -96,7 +96,7 @@ $(document).ready(function () {
 
         <div class="nav_icons">
           <a href="#" title="search"><img src="/assets/img/ico-search.png"></a>
-          <a href="#" title="my page"><img src="/assets/img/icon-login.png"></a>
+          <a href="/sub/mypage.html" title="my page"><img src="/assets/img/icon-login.png"></a>
         </div>
       </div>
     </nav>
@@ -108,9 +108,9 @@ $(document).ready(function () {
       <button class="mobile_close_btn">✕</button>
     </div>
     <div class="mobile_user_area">
-      <a href="#">로그인</a>
-      <a href="#">회원가입</a>
-      <a href="#">마이페이지</a>
+      <a href="/sub/login.html">로그인</a>
+      <a href="/sub/join.html">회원가입</a>
+      <a href="/sub/mypage.html">마이페이지</a>
     </div>
     <div class="mobile_search">
       <input type="text" placeholder="검색어를 입력하세요">

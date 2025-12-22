@@ -1,0 +1,143 @@
+@charset 'utf-8';
+
+/* login */
+.user_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user_box {
+  width: 100%;
+  max-width: 500px;
+  padding: 40px 32px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+.user_logo {
+  width: 140px;
+  margin: 10px auto;
+}
+.input_group {
+  margin-bottom: 20px;
+}
+.input_group label {
+  display: block;
+  text-align: left;
+  margin: 20px 6px 6px;
+  font-size: 1.2rem;
+}
+.input_group input {
+  width: 100%; height: 44px;
+  padding: 0 12px;
+  border-radius: 6px;
+  font-size: 1.4rem;
+  border: 1px solid var(--main-bg);
+}
+.input_group input:focus {
+  border-color: var(--main-color);
+}
+.login_option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem;
+  margin-bottom: 24px;
+}
+.user_links {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 1.3rem;
+}
+@media (max-width: 768px) {
+  .user_box {
+    padding: 32px 24px;
+  }
+}
+
+/* join */
+.agree_box label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+/* my page */
+.mypage_sidebar {
+  width: 240px;
+  padding: 24px 16px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+}
+.mypage_menu li {
+  padding: 8px;
+  margin-top: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.mypage_menu li:hover {
+  background: var(--main-bg);
+}
+.mypage_menu li.active {
+  background: var(--main-color);
+  color: #fff;
+}
+.mypage_menu li:last-child {
+  margin-top: 20px;
+  color: #c00;
+}
+.mypage_content {
+  flex: 1;
+  background: var(--white);
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+.info_card {
+  padding: 20px;
+}
+.info_row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--main-bg);
+}
+.info_row:last-child {
+  border-bottom: none;
+}
+.grade {
+  color: var(--main-color);
+}
+.btn_group {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+.btn_group button {
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 6px;
+  border: 1px solid var(--main-bg);
+  cursor: pointer;
+}
+.btn_group button.active {
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
+@media (max-width: 768px) {
+  .mypage_wrap {
+    flex-direction: column;
+  }
+  .mypage_sidebar,
+  .mypage_content {
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .mypage_content {
+    padding: 24px 20px;
+  }
+}
