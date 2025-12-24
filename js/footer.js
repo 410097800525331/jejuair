@@ -6,9 +6,9 @@ $(document).ready(function () {
         <div class="footer_link">
           <h4>제주항공</h4>
           <ul>
-            <li><a href="/sub/hero.html">회사소개</a></li>
-            <li><a href="/sub/recruit.html">채용안내</a></li>
-            <li><a href="/sub/ccm_hero.html">소비자중심경영</a></li>
+            <li><a href="/sub/about.html">회사소개</a></li>
+            <li><a href="/sub/career.html">채용안내</a></li>
+            <li><a href="/sub/ccm.html">소비자중심경영</a></li>
             <li><a href="/sub/notic.html">공지사항</a></li>
           </ul>
         </div>
