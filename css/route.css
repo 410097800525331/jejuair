@@ -1,6 +1,15 @@
 @charset "utf-8";
 
-.route_filter {
+.route .air_ticket_cards {
+  grid-template-columns: repeat(2, 1fr);
+}
+.route .polaroid_card {
+  transform: rotate(0);
+}
+.polaroid_card::before {
+  display: none;
+}
+/* .route_filter {
   display: flex;
   gap: 10px;
   margin: 30px 0;
@@ -64,9 +73,8 @@
     align-items: flex-start;
     gap: 16px;
   }
-
   .route_price {
     width: 100%;
     text-align: left;
   }
-}
+} */

@@ -15,13 +15,13 @@
   <header id="header_wrap"></header>
   <div class="ticket"></div>
 
-  <section class="popular_routes">
+  <section class="route">
     <div class="inner2">
       <div>
         <h1>인기 노선</h1>
         <p>지금 가장 많은 고객님이 선택한 인기 노선을 확인해 보세요.</p>
       </div>
-      <div class="route_filter">
+      <!-- <div class="route_filter">
         <select>
           <option>출발지 전체</option>
           <option>서울 / 인천 (SEL)</option>
@@ -37,66 +37,42 @@
           <option>정렬: 최저가순</option>
           <option>인기순</option>
         </select>
-      </div>
-      <div class="route_list">
-        <article class="route_card">
-          <div class="route_info">
-            <img src="/assets/img/main/des_M_CDG_02.jpg" alt="img">
-            <div>
-              <p class="color">최저가 항공권</p>
-              <p>서울 / 인천 / SEL → <span>파리 / 샤를 드 골</span></p>
-              <p>이코노미 · 왕복</p>
+      </div> -->
+
+      <section class="air_ticket_cards">
+        <article class="polaroid_card">
+          <a href="#"><img src="https://ozimg.flyasiana.com/image_fixed/destination/des_M_CEB_02.jpg" alt="최저가 항공권"></a>
+          <div class="card_info">
+            <div class="price_row">
+              <p>서울 / 인천 / SEL</p>
+              <p class="color">이코노미</p>
+            </div>
+            <h3>세부</h3>
+            <div class="price_row">
+              <p>왕복</p>
+              <p>KRW <span>337,800~</span></p>
             </div>
           </div>
-          <div class="route_price">
-            <strong>KRW 976,100~</strong>
-            <button class="reserve_btn">지금 예약</button>
-          </div>
+          <a class="basic_btn" href="#"><span>지금예약</span></a>
         </article>
-        <article class="route_card">
-          <div class="route_info">
-            <img src="/assets/img/main/des_M_KIX_01.jpg" alt="img">
-            <div>
-              <p class="color">최저가 항공권</p>
-              <p>서울 / 인천 / SEL → <span>오사카 / 간사이</span></p>
-              <p>이코노미 · 왕복</p>
+        <article class="polaroid_card">
+          <a href="#"><img src="https://ozimg.flyasiana.com/image_fixed/destination/des_M_SGN_01.jpg" alt="최저가 항공권"></a>
+          <div class="card_info">
+            <div class="price_row">
+              <p>서울 / 인천 / SEL</p>
+              <p class="color">이코노미</p>
+            </div>
+            <h3>호찌민</h3>
+            <div class="price_row">
+              <p>왕복</p>
+              <p>KRW <span>351,900~</span></p>
             </div>
           </div>
-          <div class="route_price">
-            <strong>KRW 256,800~</strong>
-            <button class="reserve_btn">지금 예약</button>
-          </div>
+          <a class="basic_btn" href="#"><span>지금예약</span></a>
         </article>
-        <article class="route_card">
-          <div class="route_info">
-            <img src="/assets/img/main/des_M_LHR_01.jpg" alt="img">
-            <div>
-              <p class="color">최저가 항공권</p>
-              <p>서울 / 인천 / SEL → <span>런던 / 히드로</span></p>
-              <p>이코노미 · 왕복</p>
-            </div>
-          </div>
-          <div class="route_price">
-            <strong>KRW 351,700~</strong>
-            <button class="reserve_btn">지금 예약</button>
-          </div>
-        </article>
-        <article class="route_card">
-          <div class="route_info">
-            <img src="/assets/img/main/des_M_PVG_02.jpg" alt="img">
-            <div>
-              <p class="color">최저가 항공권</p>
-              <p>서울 / 인천 / SEL → <span>상하이 / 푸동</span></p>
-              <p>이코노미 · 왕복</p>
-            </div>
-          </div>
-          <div class="route_price">
-            <strong>KRW 329,800~</strong>
-            <button class="reserve_btn">지금 예약</button>
-          </div>
-        </article>
-      </div>
-    </div>
+      </section>
+      <!-- air_ticket.js -->
+      <div class="air_ticket air_ticket_cards"></div>
   </section>
 
   <!-- ##### footer ##### -->
@@ -106,6 +82,8 @@
   <script src="/js/header.js"></script>
   <script src="/js/footer.js"></script>
   <script src="/js/ticket.js"></script>
+  <script src="/js/air_ticketData.js"></script>
+  <script src="/js/air_ticket.js"></script>
 </body>
 
 </html>

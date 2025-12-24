@@ -53,8 +53,8 @@ $(document).ready(function () {
                     <li><a href="/sub/Availability.html">항공권 예매</a></li>
                     <li><a href="/sub/viewOnOffReservationList.html">비회원 예약조회</a></li>
                     <li><a href="/sub/route.html">인기 노선</a></li>
-                    <li><a href="/sub/petService.html">반려동물 운송 서비스</a></li>
                     <li><a href="/sub/petPass.html">펫 멤버십 / 펫 패스</a></li>
+                    <li><a href="/sub/petService.html">반려동물 운송 서비스</a></li>
                   </ul>
                 </div>
                 <div class="sub_menu">
@@ -77,18 +77,18 @@ $(document).ready(function () {
                 <div class="sub_menu">
                   <h4>J 멤버스</h4>
                   <ul class="sub_menu">
-                    <li><a href="/sub/jmembersInsurance.html">금융/여행자 보험</a></li>
-                    <li><a href="/sub/jmembersGolf.html">골프 멤버십</a></li>
-                    <li><a href="/sub/jmembersAirplane.html">공항 편의</a></li>
-                    <li><a href="/sub/jmembersSightseeing.html">관광</a></li>
+                  <li><a href="/sub/jmembersSightseeing.html">관광</a></li>
+                  <li><a href="/sub/jmembersAirplane.html">공항 편의</a></li>
+                  <li><a href="/sub/jmembersGolf.html">골프 멤버십</a></li>
+                  <li><a href="/sub/jmembersInsurance.html">금융/여행자 보험</a></li>
                   </ul>
                 </div>
                 <div class="sub_menu">
                   <h4>이벤트/제휴</h4>
                   <ul class="sub_menu">
                     <li><a href="/sub/event.html">이벤트</a></li>
-                    <li><a href="#">호텔/숙소</a></li>
                     <li><a href="#">렌터카</a></li>
+                    <li><a href="#">호텔/숙소</a></li>
                   </ul>
                 </div>
             </div>
@@ -131,8 +131,8 @@ $(document).ready(function () {
           <li><a href="/sub/Availability.html">항공권 예매</a></li>
           <li><a href="/sub/viewOnOffReservationList.html">비회원 예약조회</a></li>
           <li><a href="/sub/route.html">인기 노선</a></li>
-          <li><a href="/sub/petService.html">반려동물 운송 서비스</a></li>
           <li><a href="/sub/petPass.html">펫 멤버십 / 펫 패스</a></li>
+          <li><a href="/sub/petService.html">반려동물 운송 서비스</a></li>
         </ul>
       </li>
       <li>
@@ -155,18 +155,18 @@ $(document).ready(function () {
       <li>
         <button class="mobile_menu_btn">J 멤버스</button>
         <ul class="mobile_sub_menu">
-          <li><a href="/sub/jmembersInsurance.html">금융/여행자 보험</a></li>
-          <li><a href="/sub/jmembersGolf.html">골프 멤버십</a></li>
-          <li><a href="/sub/jmembersAirplane.html">공항 편의</a></li>
           <li><a href="/sub/jmembersSightseeing.html">관광</a></li>
+          <li><a href="/sub/jmembersAirplane.html">공항 편의</a></li>
+          <li><a href="/sub/jmembersGolf.html">골프 멤버십</a></li>
+          <li><a href="/sub/jmembersInsurance.html">금융/여행자 보험</a></li>
         </ul>
       </li>
       <li>
         <button class="mobile_menu_btn">이벤트/제휴</button>
         <ul class="mobile_sub_menu">
           <li><a href="/sub/event.html">이벤트</a></li>
-          <li><a href="#">호텔/숙소</a></li>
           <li><a href="#">렌터카</a></li>
+          <li><a href="#">호텔/숙소</a></li>
         </ul>
       </li>
     </ul>
