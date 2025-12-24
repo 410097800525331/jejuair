@@ -23,7 +23,7 @@
         <p>제주항공과 함께 가장 편안한 여정을 시작하세요.</p>
       </div>
       <section class="ticket_page_content">
-        <div class="ticket_wrap search_form">
+        <div class="ticket_wrap">
           <!-- tab -->
           <div class="tab_menu">
             <div class="ticket_tab_btn active" data-tab="tab_booking">항공권 예매</div>
@@ -41,37 +41,49 @@
             <!-- ticket top -->
             <div class="ticket_top" data-tab="tab_round">
               <div class="ticketing_target">
-                <div class="form_row form_input">
-                  <label><b>출발지</b></label>
+                <div class="input_box">
+                  <label>출발지</label>
                   <input type="text" placeholder="선택">
+                  <img src="/assets/img/ico_loc.svg" alt="icon">
                 </div>
                 <div class="arrow_btn"><img src="/assets/img/ico-arrow.svg" alt="icon"></div>
-                <div class="form_row form_input">
-                  <label><b>도착지</b></label>
+                <div class="input_box">
+                  <label>도착지</label>
                   <input type="text" placeholder="선택">
+                  <img src="/assets/img/ico_loc.svg" alt="icon">
                 </div>
               </div>
             </div>
             <div class="ticket_top" data-tab="tab_oneway">
               <div class="ticketing_target">
-                <div class="form_row form_input">
-                  <label><b>출발지</b></label>
+                <div class="input_box">
+                  <label>출발지</label>
                   <input type="text" placeholder="선택">
+                  <img src="/assets/img/ico_loc.svg" alt="icon">
                 </div>
                 <div class="arrow_btn"><img src="/assets/img/ico-arrowB.svg" alt="icon"></div>
-                <div class="form_row form_input">
-                  <label><b>도착지</b></label>
+                <div class="input_box">
+                  <label>도착지</label>
                   <input type="text" placeholder="선택">
+                  <img src="/assets/img/ico_loc.svg" alt="icon">
                 </div>
               </div>
             </div>
+            <!-- ticket cutline -->
+            <div class="ticket_cutline"></div>
             <!-- ticket bottom -->
             <div class="ticket_bottom">
-              <div class="passenger_box">
-                <h4>탑승일 / 탑승객</h4>
-                <div class="name_row">
-                  <input type="date" placeholder="선택">
+              <div class="ticketing_target">
+                <div class="input_box">
+                  <label>탑승일</label>
+                  <input type="text" placeholder="선택">
+                  <img src="/assets/img/ico_cal.svg" alt="icon">
+                </div>
+                <br>
+                <div class="input_box">
+                  <label>탑승객</label>
                   <input type="text" placeholder="성인1">
+                  <img src="/assets/img/ico_person.svg" alt="icon">
                 </div>
               </div>
               <div class="pay_method">
@@ -96,25 +108,33 @@
           <div id="tab_reserve" class="ticket_tab_content">
             <div class="ticket_top">
               <div class="ticketing_target">
-                <div class="form_row form_input">
-                  <label><b>예약번호</b></label>
-                  <input type="text" placeholder="예약번호">
+                <div class="input_box">
+                  <label>탑승객</label>
+                  <input type="text" placeholder="성 (Last Name)">
+                  <img src="/assets/img/ico_person.svg" alt="icon">
                 </div>
-                <div class="form_row form_input">
-                  <label><b>탑승일</b></label>
-                  <input type="date" placeholder="YYYY.MM.DD">
+                <div class="arrow_btn"></div>
+                <div class="input_box">
+                  <label>탑승객</label>
+                  <input type="text" placeholder="이름 (First Name)">
+                  <img src="/assets/img/ico_person.svg" alt="icon">
                 </div>
               </div>
             </div>
+            <!-- ticket cutline -->
+            <div class="ticket_cutline"></div>
             <!-- ticket bottom -->
             <div class="ticket_bottom">
               <div class="ticketing_target">
-                <div class="passenger_box">
-                  <h4>탑승객</h4>
-                  <div class="name_row">
-                    <input type="text" placeholder="성 (Last Name)">
-                    <input type="text" placeholder="이름( First Name)">
-                  </div>
+                <div class="input_box">
+                  <label>예약번호</label>
+                  <input type="text" placeholder="예약번호">
+                </div>
+                <br>
+                <div class="input_box">
+                  <label>탑승일자</label>
+                  <input type="text" placeholder="YYYY.MM.DD">
+                  <img src="/assets/img/ico_cal.svg" alt="icon">
                 </div>
               </div>
               <ul class="reserve_msg">
@@ -137,22 +157,30 @@
             </div>
             <div class="ticket_top">
               <div class="ticketing_target">
-                <div class="form_row form_input">
-                  <label><b>출발지</b></label>
+                <div class="input_box">
+                  <label>출발지</label>
                   <input type="text" placeholder="선택">
+                  <img src="/assets/img/ico_loc.svg" alt="icon">
                 </div>
-                <div class="form_row form_input">
-                  <label><b>도착지</b></label>
+                <div class="arrow_btn"></div>
+                <div class="input_box">
+                  <label>도착지</label>
                   <input type="text" placeholder="선택">
-                </div>
-                <div class="form_row form_input">
-                  <label><b>탑승일</b></label>
-                  <input type="date" placeholder="YYYY.MM.DD">
+                  <img src="/assets/img/ico_loc.svg" alt="icon">
                 </div>
               </div>
             </div>
+            <!-- ticket cutline -->
+            <div class="ticket_cutline"></div>
             <!-- ticket bottom -->
             <div class="ticket_bottom" data-sub="schedule">
+              <div class="ticketing_target">
+                <div class="input_box">
+                  <label>탑승일</label>
+                  <input type="text" placeholder="선택">
+                  <img src="/assets/img/ico_cal.svg" alt="icon">
+                </div>
+              </div>
               <div class="pay_method">
                 <div class="pay_options">
                   <label><input type="radio" name="flight_type" checked> 왕복</label>
@@ -164,6 +192,13 @@
               </div>
             </div>
             <div class="ticket_bottom" data-sub="current">
+              <div class="ticketing_target">
+                <div class="input_box">
+                  <label>탑승일</label>
+                  <input type="text" placeholder="선택">
+                  <img src="/assets/img/ico_cal.svg" alt="icon">
+                </div>
+              </div>
               <div class="pay_method">
                 <div class="pay_options">
                   <label><input type="radio" name="flight_search" checked> 구간 조회</label>

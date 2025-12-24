@@ -45,7 +45,7 @@
 }
 .activity_list > div {
   padding: 15px 5px;
-  border-top: 3px solid var(--sub-color);
+  border-top: 3px solid var(--main-bg);
 }
 @media(max-width:1024px){
 .intro_text_area{padding: top 0;}

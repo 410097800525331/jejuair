@@ -10,22 +10,22 @@ convenienceTab.forEach((data, idx) => {
       <a href="${data.link1}" class="tab_text">
         <img src="${data.img1}" alt="travel img">
         <div>
-          <p>${data.text1}</p>
-          <h4>${data.text2}</h4>
+          <p>${data.title1}</p>
+          <h4>${data.text1}</h4>
         </div>
       </a>
       <a href="${data.link2}" class="tab_text">
         <img src="${data.img2}" alt="travel img">
         <div>
-          <p>${data.text3}</p>
-          <h4>${data.text4}</h4>
+          <p>${data.title2}</p>
+          <h4>${data.text2}</h4>
         </div>
       </a>
       <a href="${data.link3}" class="tab_text">
         <img src="${data.img3}" alt="travel img">
         <div>
-          <p>${data.text5}</p>
-          <h4>${data.text6}</h4>
+          <p>${data.title3}</p>
+          <h4>${data.text3}</h4>
         </div>
       </a>
     </div>

@@ -18,8 +18,8 @@
   <section class="non_member_wrap">
     <div class="inner2">
       <div>
-        <h1>항공권 예매</h1>
-        <p>제주항공과 함께 가장 편안한 여정을 시작하세요.</p>
+        <h1>비회원 예약조회</h1>
+        <p>여행사, 공항, 고객센터, 비회원 예약 및 회원 예약도 조회할 수 있어요.<br>여행사에서 구매하신 고객님은 항공사 예약번호를 입력해 주세요.</p>
       </div>
       <form class="search_form">
         <div class="form_row form_input">
@@ -28,7 +28,7 @@
         </div>
         <div class="form_row form_input">
           <label><b>탑승일자</b></label>
-          <input type="text" placeholder="YYYY.MM.DD">
+          <input type="date" placeholder="YYYY.MM.DD">
         </div>
         <div class="passenger_box">
           <h4>탑승객 정보 입력</h4>
@@ -55,6 +55,49 @@
       </div>
     </div>
   </section>
+
+  <script>
+    // 탑승객 추가 버튼
+    document.addEventListener("DOMContentLoaded", () => {
+      const passengerBox = document.querySelector(".passenger_box");
+      const addBtn = passengerBox.querySelector(".add_btn");
+
+      addBtn.addEventListener("click", () => {
+        const nameRow = document.createElement("div");
+        nameRow.className = "name_row";
+
+        nameRow.innerHTML = `
+      <input type="text" placeholder="성 (Last Name)">
+      <input type="text" placeholder="이름 (First Name)">
+      <button type="button" class="remove_btn">삭제</button>
+    `;
+
+        passengerBox.insertBefore(nameRow, passengerBox.querySelector("p"));
+      });
+
+      passengerBox.addEventListener("click", (e) => {
+        if (e.target.classList.contains("remove_btn")) {
+          e.target.parentElement.remove();
+        }
+      });
+    });
+
+    // 조회 버튼 기본검증
+    document.querySelector(".search_form").addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const reserveNo = document.querySelector('input[placeholder="예약번호 입력"]').value;
+      const date = document.getElementById("flight_date").value;
+
+      if (!reserveNo || !date) {
+        alert("예약번호와 탑승일자를 입력해 주세요.");
+        return;
+      }
+
+      alert("예약 조회가 진행됩니다.");
+    });
+  </script>
+
 
   <!-- ##### footer ##### -->
   <footer id="footer_wrap"></footer>

@@ -52,6 +52,7 @@ $(document).ready(function () {
                   <ul class="sub_menu">
                     <li><a href="/sub/ticket_reservation.html">항공권 예매</a></li>
                     <li><a href="/sub/non_member.html">비회원 예약조회</a></li>
+                    <li><a href="/sub/popular_routes.html">인기 노선</a></li>
                     <li><a href="/sub/pet.html">반려동물 운송 서비스</a></li>
                     <li><a href="/sub/pet_pass.html">펫 멤버십 / 펫 패스</a></li>
                   </ul>
@@ -129,6 +130,7 @@ $(document).ready(function () {
         <ul class="mobile_sub_menu">
           <li><a href="/sub/ticket_reservation.html">항공권 예매</a></li>
           <li><a href="/sub/non_member.html">비회원 예약조회</a></li>
+          <li><a href="/sub/popular_routes.html">인기 노선</a></li>
           <li><a href="/sub/pet.html">반려동물 운송 서비스</a></li>
           <li><a href="/sub/pet_pass.html">펫 멤버십 / 펫 패스</a></li>
         </ul>
